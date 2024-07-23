@@ -11,6 +11,22 @@
 		434CA2AC2C4F55950098C92E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA2AB2C4F55950098C92E /* ContentView.swift */; };
 		434CA2AE2C4F55960098C92E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 434CA2AD2C4F55960098C92E /* Assets.xcassets */; };
 		434CA2B12C4F55960098C92E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 434CA2B02C4F55960098C92E /* Preview Assets.xcassets */; };
+		434CA3322C4F595C0098C92E /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3302C4F595C0098C92E /* MapViewModel.swift */; };
+		434CA3332C4F595C0098C92E /* PickupFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3312C4F595C0098C92E /* PickupFormViewModel.swift */; };
+		434CA33D2C4F59890098C92E /* LocationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3372C4F59890098C92E /* LocationPickerView.swift */; };
+		434CA33E2C4F59890098C92E /* WasteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3382C4F59890098C92E /* WasteCard.swift */; };
+		434CA33F2C4F59890098C92E /* CustomStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3392C4F59890098C92E /* CustomStepper.swift */; };
+		434CA3402C4F59890098C92E /* WasteDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA33A2C4F59890098C92E /* WasteDetail.swift */; };
+		434CA3412C4F59890098C92E /* PickupFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA33B2C4F59890098C92E /* PickupFormView.swift */; };
+		434CA3422C4F59890098C92E /* WasteCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA33C2C4F59890098C92E /* WasteCategoryView.swift */; };
+		434CA3492C4F59B40098C92E /* Rombeng.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3432C4F59B40098C92E /* Rombeng.swift */; };
+		434CA34A2C4F59B40098C92E /* Penjemputan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3442C4F59B40098C92E /* Penjemputan.swift */; };
+		434CA34B2C4F59B40098C92E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3452C4F59B40098C92E /* User.swift */; };
+		434CA34C2C4F59B40098C92E /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3462C4F59B40098C92E /* Order.swift */; };
+		434CA34D2C4F59B40098C92E /* WasteType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3472C4F59B40098C92E /* WasteType.swift */; };
+		434CA34E2C4F59B40098C92E /* Waste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3482C4F59B40098C92E /* Waste.swift */; };
+		434CA3512C4F59C70098C92E /* LocationDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA34F2C4F59C70098C92E /* LocationDetailsView.swift */; };
+		434CA3522C4F59C70098C92E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3502C4F59C70098C92E /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +35,23 @@
 		434CA2AB2C4F55950098C92E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		434CA2AD2C4F55960098C92E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		434CA2B02C4F55960098C92E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		434CA3302C4F595C0098C92E /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		434CA3312C4F595C0098C92E /* PickupFormViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickupFormViewModel.swift; sourceTree = "<group>"; };
+		434CA3372C4F59890098C92E /* LocationPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPickerView.swift; sourceTree = "<group>"; };
+		434CA3382C4F59890098C92E /* WasteCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WasteCard.swift; sourceTree = "<group>"; };
+		434CA3392C4F59890098C92E /* CustomStepper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomStepper.swift; sourceTree = "<group>"; };
+		434CA33A2C4F59890098C92E /* WasteDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WasteDetail.swift; sourceTree = "<group>"; };
+		434CA33B2C4F59890098C92E /* PickupFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickupFormView.swift; sourceTree = "<group>"; };
+		434CA33C2C4F59890098C92E /* WasteCategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WasteCategoryView.swift; sourceTree = "<group>"; };
+		434CA3432C4F59B40098C92E /* Rombeng.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rombeng.swift; sourceTree = "<group>"; };
+		434CA3442C4F59B40098C92E /* Penjemputan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Penjemputan.swift; sourceTree = "<group>"; };
+		434CA3452C4F59B40098C92E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		434CA3462C4F59B40098C92E /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		434CA3472C4F59B40098C92E /* WasteType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WasteType.swift; sourceTree = "<group>"; };
+		434CA3482C4F59B40098C92E /* Waste.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Waste.swift; sourceTree = "<group>"; };
+		434CA34F2C4F59C70098C92E /* LocationDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailsView.swift; sourceTree = "<group>"; };
+		434CA3502C4F59C70098C92E /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		434CA3532C4F5A920098C92E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +84,10 @@
 		434CA2A82C4F55950098C92E /* Roambank */ = {
 			isa = PBXGroup;
 			children = (
+				434CA3532C4F5A920098C92E /* Info.plist */,
+				434CA3352C4F59710098C92E /* Models */,
+				434CA3342C4F596B0098C92E /* Views */,
+				434CA32E2C4F59420098C92E /* ViewModels */,
 				434CA2A92C4F55950098C92E /* RoambankApp.swift */,
 				434CA2AB2C4F55950098C92E /* ContentView.swift */,
 				434CA2AD2C4F55960098C92E /* Assets.xcassets */,
@@ -65,6 +102,59 @@
 				434CA2B02C4F55960098C92E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		434CA32E2C4F59420098C92E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				434CA32F2C4F594F0098C92E /* Pickup */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		434CA32F2C4F594F0098C92E /* Pickup */ = {
+			isa = PBXGroup;
+			children = (
+				434CA3302C4F595C0098C92E /* MapViewModel.swift */,
+				434CA3312C4F595C0098C92E /* PickupFormViewModel.swift */,
+			);
+			path = Pickup;
+			sourceTree = "<group>";
+		};
+		434CA3342C4F596B0098C92E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				434CA3362C4F59770098C92E /* Pickup */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		434CA3352C4F59710098C92E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				434CA3462C4F59B40098C92E /* Order.swift */,
+				434CA3442C4F59B40098C92E /* Penjemputan.swift */,
+				434CA3432C4F59B40098C92E /* Rombeng.swift */,
+				434CA3452C4F59B40098C92E /* User.swift */,
+				434CA3482C4F59B40098C92E /* Waste.swift */,
+				434CA3472C4F59B40098C92E /* WasteType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		434CA3362C4F59770098C92E /* Pickup */ = {
+			isa = PBXGroup;
+			children = (
+				434CA34F2C4F59C70098C92E /* LocationDetailsView.swift */,
+				434CA3502C4F59C70098C92E /* MapView.swift */,
+				434CA3392C4F59890098C92E /* CustomStepper.swift */,
+				434CA3372C4F59890098C92E /* LocationPickerView.swift */,
+				434CA33B2C4F59890098C92E /* PickupFormView.swift */,
+				434CA3382C4F59890098C92E /* WasteCard.swift */,
+				434CA33C2C4F59890098C92E /* WasteCategoryView.swift */,
+				434CA33A2C4F59890098C92E /* WasteDetail.swift */,
+			);
+			path = Pickup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +227,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				434CA34B2C4F59B40098C92E /* User.swift in Sources */,
+				434CA3332C4F595C0098C92E /* PickupFormViewModel.swift in Sources */,
+				434CA33D2C4F59890098C92E /* LocationPickerView.swift in Sources */,
+				434CA3492C4F59B40098C92E /* Rombeng.swift in Sources */,
 				434CA2AC2C4F55950098C92E /* ContentView.swift in Sources */,
+				434CA3402C4F59890098C92E /* WasteDetail.swift in Sources */,
+				434CA34C2C4F59B40098C92E /* Order.swift in Sources */,
+				434CA3522C4F59C70098C92E /* MapView.swift in Sources */,
+				434CA33F2C4F59890098C92E /* CustomStepper.swift in Sources */,
 				434CA2AA2C4F55950098C92E /* RoambankApp.swift in Sources */,
+				434CA34A2C4F59B40098C92E /* Penjemputan.swift in Sources */,
+				434CA34E2C4F59B40098C92E /* Waste.swift in Sources */,
+				434CA3412C4F59890098C92E /* PickupFormView.swift in Sources */,
+				434CA33E2C4F59890098C92E /* WasteCard.swift in Sources */,
+				434CA3322C4F595C0098C92E /* MapViewModel.swift in Sources */,
+				434CA3512C4F59C70098C92E /* LocationDetailsView.swift in Sources */,
+				434CA34D2C4F59B40098C92E /* WasteType.swift in Sources */,
+				434CA3422C4F59890098C92E /* WasteCategoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +381,8 @@
 				DEVELOPMENT_TEAM = D549JV5ACX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Roambank/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to set pick-up location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +412,8 @@
 				DEVELOPMENT_TEAM = D549JV5ACX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Roambank/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app needs your location to set pick-up location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
