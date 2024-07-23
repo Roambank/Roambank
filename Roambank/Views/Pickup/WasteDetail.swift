@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WasteDetailView: View {
     @Environment(\.dismiss) var dismiss
-    @State private var digitData = 0.0
+    @Binding var digitData: Double
     var wasteType: WasteType
     
     var body: some View {
@@ -64,12 +64,6 @@ struct WasteDetailView: View {
                         }
                     }
                     
-                    //                    Image("prep")
-                    //                    Rectangle()
-                    //                        .frame(height: 1)
-                    //                        .opacity(0.2)
-                    //                        .padding(.bottom, 17)
-                    
                     HStack {
                         Text("Estimasi berat")
                             .font(.system(size: 16, weight: .medium))
@@ -79,7 +73,7 @@ struct WasteDetailView: View {
                     .padding(.bottom, 16)
                     
                     Button(action: {
-                        // Code
+                        dismiss()
                     }) {
                         Text("Add item")
                             .font(.system(size: 16, weight: .semibold))
@@ -115,3 +109,4 @@ struct WasteDetailView: View {
         }
     }
 }
+

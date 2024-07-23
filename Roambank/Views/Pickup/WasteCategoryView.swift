@@ -18,19 +18,19 @@ struct WasteCategoryView: View {
             WasteItem(name: "Botol Pocari Sweat", image: "pocari sweat"),
             WasteItem(name: "Botol Teh Kotak", image: "teh kotak")
         ], steps: [
-                    Step(image: "prep", description: "Clean the bottle thoroughly."),
-                    Step(image: "prep", description: "Remove the cap and label."),
-                    Step(image: "prep", description: "Crush the bottle to save space.")
+            Step(image: "prep", description: "Clean the bottle thoroughly."),
+            Step(image: "prep", description: "Remove the cap and label."),
+            Step(image: "prep", description: "Crush the bottle to save space.")
         ]),
         WasteType(nama: "Tas Plastik", gambar: "plastik", poinPerKilo: 8, category: "Plastik", wasteItems: [
             WasteItem(name: "Tas Belanja", image: "tas belanja"),
             WasteItem(name: "Tas Kresek", image: "tas kresek"),
             WasteItem(name: "Tas Plastik", image: "tas plastik")
         ], steps: [
-                    Step(image: "prep", description: "Clean the bottle thoroughly."),
-                    Step(image: "prep", description: "Remove the cap and label."),
-                    Step(image: "prep", description: "Crush the bottle to save space.")
-                  ]),
+            Step(image: "prep", description: "Clean the bottle thoroughly."),
+            Step(image: "prep", description: "Remove the cap and label."),
+            Step(image: "prep", description: "Crush the bottle to save space.")
+        ]),
         WasteType(nama: "Kardus", gambar: "kardus", poinPerKilo: 5, category: "Kertas", wasteItems: [
             WasteItem(name: "Kardus Bekas", image: "kardus bekas"),
             WasteItem(name: "Kardus Pizza", image: "kardus pizza"),

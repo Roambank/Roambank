@@ -27,7 +27,7 @@ struct WasteCard: View {
                                 Image(wasteType.gambar)
                             )
                             .sheet(isPresented: $showSheet, content: {
-                                WasteDetailView(wasteType: wasteType)
+                                WasteDetailView(digitData: $digitData, wasteType: wasteType)
                             })
                             .onTapGesture {
                                 showSheet.toggle()
