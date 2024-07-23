@@ -27,6 +27,8 @@
 		434CA34E2C4F59B40098C92E /* Waste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3482C4F59B40098C92E /* Waste.swift */; };
 		434CA3512C4F59C70098C92E /* LocationDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA34F2C4F59C70098C92E /* LocationDetailsView.swift */; };
 		434CA3522C4F59C70098C92E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3502C4F59C70098C92E /* MapView.swift */; };
+		434CA3562C4F69C10098C92E /* WasteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3552C4F69C10098C92E /* WasteItem.swift */; };
+		434CA3582C4F9FCA0098C92E /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3572C4F9FCA0098C92E /* Step.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		434CA34F2C4F59C70098C92E /* LocationDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailsView.swift; sourceTree = "<group>"; };
 		434CA3502C4F59C70098C92E /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		434CA3532C4F5A920098C92E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		434CA3552C4F69C10098C92E /* WasteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteItem.swift; sourceTree = "<group>"; };
+		434CA3572C4F9FCA0098C92E /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,8 @@
 				434CA3452C4F59B40098C92E /* User.swift */,
 				434CA3482C4F59B40098C92E /* Waste.swift */,
 				434CA3472C4F59B40098C92E /* WasteType.swift */,
+				434CA3552C4F69C10098C92E /* WasteItem.swift */,
+				434CA3572C4F9FCA0098C92E /* Step.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -232,6 +238,7 @@
 				434CA33D2C4F59890098C92E /* LocationPickerView.swift in Sources */,
 				434CA3492C4F59B40098C92E /* Rombeng.swift in Sources */,
 				434CA2AC2C4F55950098C92E /* ContentView.swift in Sources */,
+				434CA3562C4F69C10098C92E /* WasteItem.swift in Sources */,
 				434CA3402C4F59890098C92E /* WasteDetail.swift in Sources */,
 				434CA34C2C4F59B40098C92E /* Order.swift in Sources */,
 				434CA3522C4F59C70098C92E /* MapView.swift in Sources */,
@@ -243,6 +250,7 @@
 				434CA33E2C4F59890098C92E /* WasteCard.swift in Sources */,
 				434CA3322C4F595C0098C92E /* MapViewModel.swift in Sources */,
 				434CA3512C4F59C70098C92E /* LocationDetailsView.swift in Sources */,
+				434CA3582C4F9FCA0098C92E /* Step.swift in Sources */,
 				434CA34D2C4F59B40098C92E /* WasteType.swift in Sources */,
 				434CA3422C4F59890098C92E /* WasteCategoryView.swift in Sources */,
 			);

@@ -60,9 +60,9 @@ struct WasteCard: View {
                                         if newValue > 0 {
                                             // Tambah atau perbarui item di daftar
                                             if let index = selectedWastes.firstIndex(where: { $0.wasteType.nama == wasteType.nama }) {
-                                                selectedWastes[index].berat = Int(newValue)
+                                                selectedWastes[index].berat = newValue
                                             } else {
-                                                let waste = Waste(wasteType: wasteType, berat: Int(newValue))
+                                                let waste = Waste(wasteType: wasteType, berat: newValue)
                                                 selectedWastes.append(waste)
                                             }
                                         } else {

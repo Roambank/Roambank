@@ -11,14 +11,46 @@ struct WasteCategoryView: View {
     @State private var searchText: String = ""
     @State private var navigateToPickupFormView = false
     @State private var selectedWastes: [Waste] = []
-
+    
     let wasteTypes = [
-        WasteType(nama: "Botol Plastik", gambar: "waterbottle", poinPerKilo: 10, category: "Plastik"),
-        WasteType(nama: "Tas Plastik", gambar: "plastik", poinPerKilo: 8, category: "Plastik"),
-        WasteType(nama: "Kardus", gambar: "kardus", poinPerKilo: 5, category: "Kertas"),
-        WasteType(nama: "Kaleng", gambar: "kaleng soda", poinPerKilo: 12, category: "Logam")
+        WasteType(nama: "Botol Plastik", gambar: "waterbottle", poinPerKilo: 10, category: "Plastik", wasteItems: [
+            WasteItem(name: "Botol Aqua", image: "aqua"),
+            WasteItem(name: "Botol Pocari Sweat", image: "pocari sweat"),
+            WasteItem(name: "Botol Teh Kotak", image: "teh kotak")
+        ], steps: [
+                    Step(image: "prep", description: "Clean the bottle thoroughly."),
+                    Step(image: "prep", description: "Remove the cap and label."),
+                    Step(image: "prep", description: "Crush the bottle to save space.")
+        ]),
+        WasteType(nama: "Tas Plastik", gambar: "plastik", poinPerKilo: 8, category: "Plastik", wasteItems: [
+            WasteItem(name: "Tas Belanja", image: "tas belanja"),
+            WasteItem(name: "Tas Kresek", image: "tas kresek"),
+            WasteItem(name: "Tas Plastik", image: "tas plastik")
+        ], steps: [
+                    Step(image: "prep", description: "Clean the bottle thoroughly."),
+                    Step(image: "prep", description: "Remove the cap and label."),
+                    Step(image: "prep", description: "Crush the bottle to save space.")
+                  ]),
+        WasteType(nama: "Kardus", gambar: "kardus", poinPerKilo: 5, category: "Kertas", wasteItems: [
+            WasteItem(name: "Kardus Bekas", image: "kardus bekas"),
+            WasteItem(name: "Kardus Pizza", image: "kardus pizza"),
+            WasteItem(name: "Kardus Susu", image: "kardus susu")
+        ], steps: [
+            Step(image: "prep", description: "Clean the bottle thoroughly."),
+            Step(image: "prep", description: "Remove the cap and label."),
+            Step(image: "prep", description: "Crush the bottle to save space.")
+        ]),
+        WasteType(nama: "Kaleng", gambar: "kaleng soda", poinPerKilo: 12, category: "Logam", wasteItems: [
+            WasteItem(name: "Kaleng Soda", image: "kaleng soda"),
+            WasteItem(name: "Kaleng Susu", image: "kaleng susu"),
+            WasteItem(name: "Kaleng Teh", image: "kaleng teh")
+        ], steps: [
+            Step(image: "prep", description: "Clean the bottle thoroughly."),
+            Step(image: "prep", description: "Remove the cap and label."),
+            Step(image: "prep", description: "Crush the bottle to save space.")
+        ]),
     ]
-
+    
     var body: some View {
         NavigationStack {
             VStack {

@@ -13,13 +13,17 @@ struct WasteType: Identifiable {
     let gambar: String
     let poinPerKilo: Int
     let category: String
+    let wasteItems: [WasteItem]
+    var steps: [Step]
     
-    init(id: UUID = UUID(), nama: String, gambar: String, poinPerKilo: Int, category: String) {
+    init(id: UUID = UUID(), nama: String, gambar: String, poinPerKilo: Int, category: String, wasteItems: [WasteItem], steps: [Step]) {
         self.id = id
         self.nama = nama
         self.gambar = gambar
         self.poinPerKilo = poinPerKilo
         self.category = category
+        self.wasteItems = wasteItems
+        self.steps = steps
     }
 }
 
