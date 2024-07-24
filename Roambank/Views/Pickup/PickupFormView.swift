@@ -57,8 +57,8 @@ struct PickupFormView: View {
                                     Text(selectedLocation)
                                         .font(.headline)
                                     Text(detailLocation)
-                                                                                .font(.subheadline)
-                                                                                .foregroundColor(.gray)
+                                        .font(.subheadline)
+                                        .foregroundColor(.gray)
                                     TextField("Notes", text: $viewModel.locationNotes)
                                         .font(.subheadline)
                                         .foregroundColor(.gray)
@@ -74,7 +74,8 @@ struct PickupFormView: View {
                 viewModel.selectedWaste = selectedWastes
                 viewModel.location = selectedLocation
                 viewModel.detailLocation = detailLocation
-                viewModel.createSchedule()
+                viewModel.createdOrder = viewModel.createOrder()
+                viewModel.navigateToConfirmation = true
             }) {
                 Text("Create Schedule")
                     .frame(maxWidth: .infinity)
@@ -89,8 +90,13 @@ struct PickupFormView: View {
             }
         }
         .navigationTitle("Schedule Pickup")
+        .navigationDestination(isPresented: $viewModel.navigateToConfirmation) {
+            if let order = viewModel.createdOrder {
+                ConfirmationView(order: order)
+            }
+            
+        }
     }
-    
 }
 
 struct PickupFormView_Previews: PreviewProvider {

@@ -9,12 +9,7 @@ import Foundation
 import SwiftUI
 
 class PickupFormViewModel: ObservableObject {
-    @Published var selectedWaste: [Waste] = [
-//        Waste(wasteType: WasteType(nama: "Botol Plastik", gambar: "plastik.png", poinPerKilo: 10, category: "Plastik"), berat: 5),
-//        Waste(wasteType: WasteType(nama: "Meja Plastik", gambar: "kertas.png", poinPerKilo: 8, category: "Plastik"), berat: 3),
-//        Waste(wasteType: WasteType(nama: "Botol Kaca", gambar: "kaca.png", poinPerKilo: 15, category: "Kaca"), berat: 7)
-    ]
-    
+    @Published var selectedWaste: [Waste] = []
     @Published var selectedDate: Date = Date()
     @Published var selectedTime: String = ""
     @Published var location: String = ""
@@ -22,6 +17,8 @@ class PickupFormViewModel: ObservableObject {
     @Published var locationNotes: String = ""
     @Published var showingAlert = false
     @Published var alertMessage = ""
+    @Published var navigateToConfirmation = false
+    @Published var createdOrder: Order?
     
     let user = User(nama: "John Doe", noHP: "08123456789", alamat: "Jl. Example No. 123, Surabaya")
     let timeSlots = ["6:00-9:00", "12:00-15:00", "18:00-21:00"]
@@ -38,15 +35,9 @@ class PickupFormViewModel: ObservableObject {
         let formattedDate = dateFormatter.string(from: selectedDate)
         
         var totalPoin = 0
-        let wasteDetails = selectedWaste.enumerated().map { (index, waste) -> String in
+        selectedWaste.forEach { waste in
             totalPoin += Int(waste.berat * Double(waste.wasteType.poinPerKilo))
-            return """
-            \(index + 1). *Waste Type: \(waste.wasteType.nama)*
-            - Weight: \(waste.berat) kg
-            - Category: \(waste.wasteType.category)
-            """
-            //            - Points per Kilo: \(waste.wasteType.poinPerKilo)
-        }.joined(separator: "\n")
+        }
         
         let rombeng = Rombeng(nama: "John Doe", wilayah: "Surabaya")
         
@@ -68,6 +59,8 @@ class PickupFormViewModel: ObservableObject {
     
     func createSchedule() {
         guard let order = createOrder() else { return }
+        createdOrder = order
+        navigateToConfirmation = true
         
         let wasteDetails = order.wastes.enumerated().map { (index, waste) -> String in
             return """
@@ -107,4 +100,3 @@ class PickupFormViewModel: ObservableObject {
         }
     }
 }
-

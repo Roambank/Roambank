@@ -29,6 +29,7 @@
 		434CA3522C4F59C70098C92E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3502C4F59C70098C92E /* MapView.swift */; };
 		434CA3562C4F69C10098C92E /* WasteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3552C4F69C10098C92E /* WasteItem.swift */; };
 		434CA3582C4F9FCA0098C92E /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3572C4F9FCA0098C92E /* Step.swift */; };
+		43DD09A22C4FFC37009B0786 /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DD09A12C4FFC37009B0786 /* ConfirmationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		434CA3532C4F5A920098C92E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		434CA3552C4F69C10098C92E /* WasteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteItem.swift; sourceTree = "<group>"; };
 		434CA3572C4F9FCA0098C92E /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		43DD09A12C4FFC37009B0786 /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				434CA3382C4F59890098C92E /* WasteCard.swift */,
 				434CA33C2C4F59890098C92E /* WasteCategoryView.swift */,
 				434CA33A2C4F59890098C92E /* WasteDetail.swift */,
+				43DD09A12C4FFC37009B0786 /* ConfirmationView.swift */,
 			);
 			path = Pickup;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				434CA3412C4F59890098C92E /* PickupFormView.swift in Sources */,
 				434CA33E2C4F59890098C92E /* WasteCard.swift in Sources */,
 				434CA3322C4F595C0098C92E /* MapViewModel.swift in Sources */,
+				43DD09A22C4FFC37009B0786 /* ConfirmationView.swift in Sources */,
 				434CA3512C4F59C70098C92E /* LocationDetailsView.swift in Sources */,
 				434CA3582C4F9FCA0098C92E /* Step.swift in Sources */,
 				434CA34D2C4F59B40098C92E /* WasteType.swift in Sources */,
