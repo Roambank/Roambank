@@ -13,7 +13,6 @@
 		434CA2B12C4F55960098C92E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 434CA2B02C4F55960098C92E /* Preview Assets.xcassets */; };
 		434CA3322C4F595C0098C92E /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3302C4F595C0098C92E /* MapViewModel.swift */; };
 		434CA3332C4F595C0098C92E /* PickupFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3312C4F595C0098C92E /* PickupFormViewModel.swift */; };
-		434CA33D2C4F59890098C92E /* LocationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3372C4F59890098C92E /* LocationPickerView.swift */; };
 		434CA33E2C4F59890098C92E /* WasteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3382C4F59890098C92E /* WasteCard.swift */; };
 		434CA33F2C4F59890098C92E /* CustomStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3392C4F59890098C92E /* CustomStepper.swift */; };
 		434CA3402C4F59890098C92E /* WasteDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA33A2C4F59890098C92E /* WasteDetail.swift */; };
@@ -25,7 +24,6 @@
 		434CA34C2C4F59B40098C92E /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3462C4F59B40098C92E /* Order.swift */; };
 		434CA34D2C4F59B40098C92E /* WasteType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3472C4F59B40098C92E /* WasteType.swift */; };
 		434CA34E2C4F59B40098C92E /* Waste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3482C4F59B40098C92E /* Waste.swift */; };
-		434CA3512C4F59C70098C92E /* LocationDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA34F2C4F59C70098C92E /* LocationDetailsView.swift */; };
 		434CA3522C4F59C70098C92E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3502C4F59C70098C92E /* MapView.swift */; };
 		434CA3562C4F69C10098C92E /* WasteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3552C4F69C10098C92E /* WasteItem.swift */; };
 		434CA3582C4F9FCA0098C92E /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA3572C4F9FCA0098C92E /* Step.swift */; };
@@ -42,7 +40,6 @@
 		434CA2B02C4F55960098C92E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		434CA3302C4F595C0098C92E /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		434CA3312C4F595C0098C92E /* PickupFormViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickupFormViewModel.swift; sourceTree = "<group>"; };
-		434CA3372C4F59890098C92E /* LocationPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPickerView.swift; sourceTree = "<group>"; };
 		434CA3382C4F59890098C92E /* WasteCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WasteCard.swift; sourceTree = "<group>"; };
 		434CA3392C4F59890098C92E /* CustomStepper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomStepper.swift; sourceTree = "<group>"; };
 		434CA33A2C4F59890098C92E /* WasteDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WasteDetail.swift; sourceTree = "<group>"; };
@@ -54,7 +51,6 @@
 		434CA3462C4F59B40098C92E /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		434CA3472C4F59B40098C92E /* WasteType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WasteType.swift; sourceTree = "<group>"; };
 		434CA3482C4F59B40098C92E /* Waste.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Waste.swift; sourceTree = "<group>"; };
-		434CA34F2C4F59C70098C92E /* LocationDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailsView.swift; sourceTree = "<group>"; };
 		434CA3502C4F59C70098C92E /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		434CA3532C4F5A920098C92E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		434CA3552C4F69C10098C92E /* WasteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteItem.swift; sourceTree = "<group>"; };
@@ -158,9 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				43DD09A52C50B977009B0786 /* Components */,
-				434CA34F2C4F59C70098C92E /* LocationDetailsView.swift */,
 				434CA3502C4F59C70098C92E /* MapView.swift */,
-				434CA3372C4F59890098C92E /* LocationPickerView.swift */,
 				434CA33B2C4F59890098C92E /* PickupFormView.swift */,
 				434CA33C2C4F59890098C92E /* WasteCategoryView.swift */,
 				43DD09A12C4FFC37009B0786 /* ConfirmationView.swift */,
@@ -252,7 +246,6 @@
 			files = (
 				434CA34B2C4F59B40098C92E /* User.swift in Sources */,
 				434CA3332C4F595C0098C92E /* PickupFormViewModel.swift in Sources */,
-				434CA33D2C4F59890098C92E /* LocationPickerView.swift in Sources */,
 				434CA3492C4F59B40098C92E /* Rombeng.swift in Sources */,
 				434CA2AC2C4F55950098C92E /* ContentView.swift in Sources */,
 				434CA3562C4F69C10098C92E /* WasteItem.swift in Sources */,
@@ -268,7 +261,6 @@
 				434CA33E2C4F59890098C92E /* WasteCard.swift in Sources */,
 				434CA3322C4F595C0098C92E /* MapViewModel.swift in Sources */,
 				43DD09A22C4FFC37009B0786 /* ConfirmationView.swift in Sources */,
-				434CA3512C4F59C70098C92E /* LocationDetailsView.swift in Sources */,
 				434CA3582C4F9FCA0098C92E /* Step.swift in Sources */,
 				434CA34D2C4F59B40098C92E /* WasteType.swift in Sources */,
 				43DD09A92C50BA25009B0786 /* HomeView.swift in Sources */,
