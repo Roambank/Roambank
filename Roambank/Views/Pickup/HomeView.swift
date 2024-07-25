@@ -31,15 +31,15 @@ struct HomeView: View {
     }
 }
 
-struct ContributionView: View {
-    var body: some View {
-        VStack {
-            Text("Contribution Content")
-            // Add your Contribution page content here
-        }
-        .navigationTitle("Kontribusi")
-    }
-}
+//struct ContributionView: View {
+//    var body: some View {
+//        VStack {
+//            Text("Contribution Content")
+//            // Add your Contribution page content here
+//        }
+//        .navigationTitle("Kontribusi")
+//    }
+//}
 
 struct GuideView: View {
     var body: some View {

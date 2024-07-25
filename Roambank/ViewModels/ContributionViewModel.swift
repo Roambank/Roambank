@@ -22,9 +22,9 @@ class OrderViewModel: ObservableObject {
 }
 
 class WasteViewModel: ObservableObject, Identifiable {
-    @Published var waste: Waste
+    @Published var waste: WasteOrder
     
-    init(waste: Waste) {
+    init(waste: WasteOrder) {
         self.waste = waste
     }
     
@@ -36,7 +36,7 @@ class WasteViewModel: ObservableObject, Identifiable {
         return waste.wasteType
     }
     
-    var berat: Int {
+    var berat: Double {
         get {
             return waste.berat
         }
@@ -48,12 +48,12 @@ class WasteViewModel: ObservableObject, Identifiable {
 
 struct ContributionView_Previews: PreviewProvider {
     static var previews: some View {
-        let wasteType = WasteType(nama: "Organic", gambar: "organic.png", poinPerKilo: 10, category: "Organic")
+        let wasteType = WasteType(nama: "Organic", gambar: "organic.png", poinPerKilo: 10, category: "Organic", wasteItems: [], steps: [])
         let wastes = [
-            Waste(wasteType: wasteType, berat: 5),
-            Waste(wasteType: wasteType, berat: 2)
+            WasteOrder(wasteType: wasteType, berat: 5),
+            WasteOrder(wasteType: wasteType, berat: 2)
         ]
         
-        return ContributionView(wastes: wastes)
+        return ContributionView()
     }
 }

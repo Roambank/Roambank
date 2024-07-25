@@ -9,7 +9,7 @@ import SwiftUI
 import Observation
 
 struct ContributionView: View {
-    let wastes: [Waste]
+    @State private var wastes: [WasteOrder] = []
     @State private var showingSheet = false
     @State private var selectedOption = "CO2"
     
@@ -26,7 +26,6 @@ struct ContributionView: View {
             Image("ContributionBackground")
                 .resizable()
                 .scaledToFill()
-                .ignoresSafeArea()
             
             VStack {
                 Spacer()
@@ -127,7 +126,7 @@ struct ContributionView: View {
         }
     }
     
-    func calculateCO2(waste: Waste) -> Double {
+    func calculateCO2(waste: WasteOrder) -> Double {
         let multiplier: Double
         switch waste.wasteType.nama {
         case "Plastik":
@@ -140,7 +139,7 @@ struct ContributionView: View {
         return Double(waste.berat) * multiplier
     }
     
-    func calculateTree(waste: Waste) -> Double {
+    func calculateTree(waste: WasteOrder) -> Double {
             let treeMultiplier: Double
             switch waste.wasteType.nama {
             case "Plastik":
