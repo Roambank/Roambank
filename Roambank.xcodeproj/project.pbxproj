@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		106AC2372C4F5FBF008419F8 /* ContributionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106AC2362C4F5FBF008419F8 /* ContributionView.swift */; };
+		10D6024A2C5098CA00EA815E /* ContributionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D602492C5098CA00EA815E /* ContributionViewModel.swift */; };
 		434CA2AA2C4F55950098C92E /* RoambankApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA2A92C4F55950098C92E /* RoambankApp.swift */; };
 		434CA2AC2C4F55950098C92E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA2AB2C4F55950098C92E /* ContentView.swift */; };
 		434CA2AE2C4F55960098C92E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 434CA2AD2C4F55960098C92E /* Assets.xcassets */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		106AC2362C4F5FBF008419F8 /* ContributionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionView.swift; sourceTree = "<group>"; };
+		10D602492C5098CA00EA815E /* ContributionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionViewModel.swift; sourceTree = "<group>"; };
 		434CA2A62C4F55950098C92E /* Roambank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roambank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		434CA2A92C4F55950098C92E /* RoambankApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoambankApp.swift; sourceTree = "<group>"; };
 		434CA2AB2C4F55950098C92E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +69,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		106AC2352C4F5F54008419F8 /* Kontribusi */ = {
+			isa = PBXGroup;
+			children = (
+				106AC2362C4F5FBF008419F8 /* ContributionView.swift */,
+			);
+			path = Kontribusi;
+			sourceTree = "<group>";
+		};
 		434CA29D2C4F55950098C92E = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +119,7 @@
 		434CA32E2C4F59420098C92E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				10D602492C5098CA00EA815E /* ContributionViewModel.swift */,
 				434CA32F2C4F594F0098C92E /* Pickup */,
 			);
 			path = ViewModels;
@@ -124,6 +137,7 @@
 		434CA3342C4F596B0098C92E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				106AC2352C4F5F54008419F8 /* Kontribusi */,
 				434CA3362C4F59770098C92E /* Pickup */,
 			);
 			path = Views;
@@ -234,12 +248,14 @@
 				434CA2AC2C4F55950098C92E /* ContentView.swift in Sources */,
 				434CA3402C4F59890098C92E /* WasteDetail.swift in Sources */,
 				434CA34C2C4F59B40098C92E /* Order.swift in Sources */,
+				106AC2372C4F5FBF008419F8 /* ContributionView.swift in Sources */,
 				434CA3522C4F59C70098C92E /* MapView.swift in Sources */,
 				434CA33F2C4F59890098C92E /* CustomStepper.swift in Sources */,
 				434CA2AA2C4F55950098C92E /* RoambankApp.swift in Sources */,
 				434CA34A2C4F59B40098C92E /* Penjemputan.swift in Sources */,
 				434CA34E2C4F59B40098C92E /* Waste.swift in Sources */,
 				434CA3412C4F59890098C92E /* PickupFormView.swift in Sources */,
+				10D6024A2C5098CA00EA815E /* ContributionViewModel.swift in Sources */,
 				434CA33E2C4F59890098C92E /* WasteCard.swift in Sources */,
 				434CA3322C4F595C0098C92E /* MapViewModel.swift in Sources */,
 				434CA3512C4F59C70098C92E /* LocationDetailsView.swift in Sources */,
@@ -378,7 +394,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Roambank/Preview Content\"";
-				DEVELOPMENT_TEAM = D549JV5ACX;
+				DEVELOPMENT_TEAM = 44ML4QK57Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Roambank/Info.plist;
@@ -409,7 +425,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Roambank/Preview Content\"";
-				DEVELOPMENT_TEAM = D549JV5ACX;
+				DEVELOPMENT_TEAM = 44ML4QK57Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Roambank/Info.plist;
