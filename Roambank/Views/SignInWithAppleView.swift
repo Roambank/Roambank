@@ -12,38 +12,42 @@ struct SignInWithAppleView: View {
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
-        SignInWithAppleButton(
-            .signIn,
-            onRequest: { request in
-                request.requestedScopes = [.fullName, .email]
-            },
-            onCompletion: { result in
-                switch result {
-                case .success(let authResults):
-                    switch authResults.credential {
-                    case let appleIDCredential as ASAuthorizationAppleIDCredential:
-                        _ = appleIDCredential.user
-                        let userFirstName = appleIDCredential.fullName?.givenName
-                        let userLastName = appleIDCredential.fullName?.familyName
-                        let userEmail = appleIDCredential.email
-                        
-                        // Store the user data in AppStorage
-                        if let firstName = userFirstName, let lastName = userLastName, let email = userEmail {
-                            UserDefaults.standard.set(firstName, forKey: "firstName")
-                            UserDefaults.standard.set(lastName, forKey: "lastName")
-                            UserDefaults.standard.set(email, forKey: "email")
+        VStack {
+            Spacer()
+            SignInWithAppleButton(
+                .signIn,
+                onRequest: { request in
+                    request.requestedScopes = [.fullName, .email]
+                },
+                onCompletion: { result in
+                    switch result {
+                    case .success(let authResults):
+                        switch authResults.credential {
+                        case let appleIDCredential as ASAuthorizationAppleIDCredential:
+                            _ = appleIDCredential.user
+                            let userFirstName = appleIDCredential.fullName?.givenName
+                            let userLastName = appleIDCredential.fullName?.familyName
+                            let userEmail = appleIDCredential.email
+                            
+                            // Store the user data in AppStorage
+                            if let firstName = userFirstName, let lastName = userLastName, let email = userEmail {
+                                UserDefaults.standard.set(firstName, forKey: "firstName")
+                                UserDefaults.standard.set(lastName, forKey: "lastName")
+                                UserDefaults.standard.set(email, forKey: "email")
+                            }
+                        default:
+                            break
                         }
-                    default:
-                        break
+                    case .failure(let error):
+                        print("Authorization failed: \(error.localizedDescription)")
                     }
-                case .failure(let error):
-                    print("Authorization failed: \(error.localizedDescription)")
                 }
-            }
-        )
-        .signInWithAppleButtonStyle(colorScheme == .dark ? .white : .black)
-        .frame(height: 45)
-        .padding()
+            )
+            .signInWithAppleButtonStyle(colorScheme == .dark ? .white : .black)
+            .frame(height: 45)
+            .padding()
+            Spacer()
+        }
     }
 }
 
