@@ -11,6 +11,7 @@ struct WasteCategoryView: View {
     @State private var searchText: String = ""
     @State private var navigateToPickupFormView = false
     @State private var selectedWastes: [Waste] = []
+    @Binding var navigateFromRecycle: Bool
     
     let wasteTypes = [
         WasteType(nama: "Botol Plastik", gambar: "waterbottle", poinPerKilo: 10, category: "Plastik", wasteItems: [
@@ -52,7 +53,6 @@ struct WasteCategoryView: View {
     ]
     
     var body: some View {
-        NavigationStack {
             VStack {
                 
                 ScrollView(.horizontal) {
@@ -105,7 +105,6 @@ struct WasteCategoryView: View {
                                         .stroke(Color.primary.opacity(0.2), lineWidth: 1)
                                     )
                                 }
-                                NavigationLink(destination: PickupFormView(selectedWastes: selectedWastes), isActive: $navigateToPickupFormView) {
                                     Button(action: {
                                         navigateToPickupFormView = true
                                     }) {
@@ -117,16 +116,19 @@ struct WasteCategoryView: View {
                                             .background(Color("Ijo"))
                                             .cornerRadius(8)
                                     }
-                                }
                             }
                         }
                 }
             }
-        }
         .searchable(
             text: $searchText,
             placement: .navigationBarDrawer(displayMode: .always)
         )
+        .navigationTitle("Ajukan Penjemputan")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationDestination(isPresented: $navigateToPickupFormView) {
+            PickupFormView(navigateFromRecycle: $navigateFromRecycle, selectedWastes: selectedWastes)
+        }
     }
 }
 
@@ -150,6 +152,6 @@ struct CategoryButton: View {
 
 struct WasteCategoryView_Previews: PreviewProvider {
     static var previews: some View {
-        WasteCategoryView()
+        WasteCategoryView(navigateFromRecycle: .constant(false))
     }
 }
