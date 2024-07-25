@@ -31,16 +31,6 @@ struct HomeView: View {
     }
 }
 
-//struct RecycleView: View {
-//    var body: some View {
-//        VStack {
-//            Text("Recycle Content")
-//            // Add your Recycle page content here
-//        }
-//        .navigationTitle("Recycle")
-//    }
-//}
-
 struct ContributionView: View {
     var body: some View {
         VStack {

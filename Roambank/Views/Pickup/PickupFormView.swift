@@ -14,7 +14,7 @@ struct PickupFormView: View {
     @State private var detailLocation: String = ""
     @Binding var navigateFromRecycle: Bool
     
-    var selectedWastes: [Waste]
+    var selectedWastes: [WasteOrder]
     
     var body: some View {
         VStack {

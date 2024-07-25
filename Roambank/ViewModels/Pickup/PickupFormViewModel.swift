@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 class PickupFormViewModel: ObservableObject {
-    @Published var selectedWaste: [Waste] = []
+    @Published var selectedWaste: [WasteOrder] = []
     @Published var selectedDate: Date = Date()
     @Published var selectedTime: String = ""
     @Published var location: String = ""

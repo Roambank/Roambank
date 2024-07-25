@@ -123,7 +123,6 @@ struct ConfirmationView: View {
             .padding(.horizontal)
             .padding(.vertical)
         }
-        
         .navigationBarBackButtonHidden(true)
     }
 }
@@ -131,9 +130,9 @@ struct ConfirmationView: View {
 struct ConfirmationView_Previews: PreviewProvider {
     static var previews: some View {
         let sampleWaste = [
-            Waste(wasteType: WasteType(nama: "Tas Plastik", gambar: "plastik.png", poinPerKilo: 8, category: "Plastik", wasteItems: [], steps: []), berat: 2.0),
-            Waste(wasteType: WasteType(nama: "Botol Plastik", gambar: "plastik.png", poinPerKilo: 10, category: "Plastik", wasteItems: [], steps: []), berat: 2.0),
-            Waste(wasteType: WasteType(nama: "Kardus", gambar: "kardus.png", poinPerKilo: 5, category: "Kertas", wasteItems: [], steps: []), berat: 5.0)
+            WasteOrder(wasteType: WasteType(nama: "Tas Plastik", gambar: "plastik.png", poinPerKilo: 8, category: "Plastik", wasteItems: [], steps: []), berat: 2.0),
+            WasteOrder(wasteType: WasteType(nama: "Botol Plastik", gambar: "plastik.png", poinPerKilo: 10, category: "Plastik", wasteItems: [], steps: []), berat: 2.0),
+            WasteOrder(wasteType: WasteType(nama: "Kardus", gambar: "kardus.png", poinPerKilo: 5, category: "Kertas", wasteItems: [], steps: []), berat: 5.0)
         ]
         
         let sampleUser = User(nama: "John Doe", noHP: "08123456789", alamat: "Jl. Example No. 123, Surabaya")
