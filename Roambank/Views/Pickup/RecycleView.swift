@@ -9,11 +9,15 @@ import SwiftUI
 
 struct RecycleView: View {
     @State private var navigateFromRecycle = false
+    @State private var navigateToProfile = false
     
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 20) {
+                    CustomHeaderView(navigateToProfile: $navigateToProfile)
+                    //                        .padding(.bottom, 20)
+                    
                     Button {
                         navigateFromRecycle = true
                     } label: {
@@ -50,10 +54,41 @@ struct RecycleView: View {
                 }
             }
             .navigationTitle("Recycle")
+            .navigationBarHidden(true)
             .navigationDestination(isPresented: $navigateFromRecycle) {
                 WasteCategoryView(navigateFromRecycle: $navigateFromRecycle)
             }
+            .navigationDestination(isPresented: $navigateToProfile) {
+                ProfileView()
+            }
         }
+    }
+}
+
+struct CustomHeaderView: View {
+    @Binding var navigateToProfile: Bool
+    
+    var body: some View {
+        HStack {
+            Text("Recycle")
+                .font(.largeTitle)
+                .bold()
+                .foregroundColor(.primary)
+            
+            Spacer()
+            
+            Button(action: {
+                navigateToProfile = true
+            }) {
+                Image(systemName: "person.circle.fill")
+                    .resizable()
+                    .frame(width: 35, height: 35)
+                    .foregroundColor(.primary)
+                    .padding(5)
+            }
+            .background(Circle().fill(Color.white).shadow(radius: 2))
+        }
+        .padding()
     }
 }
 

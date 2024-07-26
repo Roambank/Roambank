@@ -9,6 +9,7 @@ import Foundation
 
 struct Order: Identifiable {
     let id: UUID
+    let user: User
     let wastes: [WasteOrder]
     let intervalJam: String
     let hari: String
@@ -21,6 +22,7 @@ struct Order: Identifiable {
     
     init(id: UUID = UUID(), user: User, wastes: [WasteOrder], intervalJam: String, hari: String, lokasi: String, detailLokasi: String, status: String, rombeng: Rombeng, poin: Int, keteranganLokasi: String) {
         self.id = id
+        self.user = user
         self.wastes = wastes
         self.intervalJam = intervalJam
         self.detailLokasi = detailLokasi
