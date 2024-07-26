@@ -10,11 +10,14 @@ import SwiftUI
 struct RecycleView: View {
     @State private var navigateFromRecycle = false
     @State private var navigateToProfile = false
-
+    
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 20) {
+                    CustomHeaderView(navigateToProfile: $navigateToProfile)
+                    //                        .padding(.bottom, 20)
+                    
                     Button {
                         navigateFromRecycle = true
                     } label: {
@@ -28,7 +31,7 @@ struct RecycleView: View {
                     }
                     .padding(.horizontal)
                     .padding(.top, 20)
-
+                    
                     Section(header: SectionHeader(title: "Komunitas", linkTitle: "Lihat Semua")) {
                         VStack(spacing: 10) {
                             CommunityCard(imageName: "community1", title: "Bank Sampah Surabaya Induk", description: "Bank Sampah Induk Surabaya telah aktif berkecimpung dalam bidang pengelolaan sampah selama lebih dari 10 tahun.")
@@ -37,7 +40,7 @@ struct RecycleView: View {
                         }
                         .padding(.horizontal)
                     }
-
+                    
                     Section(header: SectionHeader(title: "Berita", linkTitle: "Lihat Semua")) {
                         VStack(spacing: 10) {
                             NewsCard(imageName: "news1", title: "Dampak Positif dari Konten Pandawara Grup, Anak-anak di Wakatobi Ini Terjun ke Sungai dan Membersihkan Sampah yang Menumpuk", date: "23 Juli 2024")
@@ -46,48 +49,53 @@ struct RecycleView: View {
                         }
                         .padding(.horizontal)
                     }
-
+                    
                     Spacer()
                 }
             }
             .navigationTitle("Recycle")
+            .navigationBarHidden(true)
             .navigationDestination(isPresented: $navigateFromRecycle) {
                 WasteCategoryView(navigateFromRecycle: $navigateFromRecycle)
             }
             .navigationDestination(isPresented: $navigateToProfile) {
                 ProfileView()
             }
-            .overlay(
-                HStack {
-                    Spacer()
-                    Button(action: {
-                        navigateToProfile = true
-                    }) {
-                        ZStack {
-                            Circle()
-                                .fill(Color.white)
-                                .frame(width: 50, height: 50)
-                                .shadow(radius: 2)
-                        Image(systemName: "person.circle.fill")
-                            .resizable()
-                            .frame(width: 35, height: 35)
-                            .foregroundColor(.primary)
-                            .padding()
-                        }
-                    }
-                }
-//                    .frame(height: 0)
-//                .padding(.top, 0) // Adjust this value to move the button higher
-                , alignment: .topTrailing
-            )
         }
+    }
+}
+
+struct CustomHeaderView: View {
+    @Binding var navigateToProfile: Bool
+    
+    var body: some View {
+        HStack {
+            Text("Recycle")
+                .font(.largeTitle)
+                .bold()
+                .foregroundColor(.primary)
+            
+            Spacer()
+            
+            Button(action: {
+                navigateToProfile = true
+            }) {
+                Image(systemName: "person.circle.fill")
+                    .resizable()
+                    .frame(width: 35, height: 35)
+                    .foregroundColor(.primary)
+                    .padding(5)
+            }
+            .background(Circle().fill(Color.white).shadow(radius: 2))
+        }
+        .padding()
     }
 }
 
 struct SectionHeader: View {
     var title: String
     var linkTitle: String
-
+    
     var body: some View {
         HStack {
             Text(title)
@@ -111,7 +119,7 @@ struct CommunityCard: View {
     var imageName: String
     var title: String
     var description: String
-
+    
     var body: some View {
         HStack(alignment: .top) {
             Image(imageName)
@@ -139,7 +147,7 @@ struct NewsCard: View {
     var imageName: String
     var title: String
     var date: String
-
+    
     var body: some View {
         HStack(alignment: .top) {
             Image(imageName)
