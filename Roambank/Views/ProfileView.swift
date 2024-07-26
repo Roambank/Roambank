@@ -16,7 +16,6 @@ struct ProfileView: View {
     
     var body: some View {
         if !firstName.isEmpty && !email.isEmpty {
-            NavigationStack {
                 VStack {
                     HStack {
                         VStack(alignment: .leading, spacing: 8) {
@@ -44,7 +43,7 @@ struct ProfileView: View {
                                 Spacer()
                                 
                                 Button(action: {
-                                    // Action for navigation
+
                                 }) {
                                     Image(systemName: "arrow.right.circle")
                                         .resizable()
@@ -63,18 +62,12 @@ struct ProfileView: View {
                             NavigationLink(destination: Text("Linked Accounts View")) {
                                 HStack {
                                     Text("Linked Accounts")
-//                                    Spacer()
-//                                    Image(systemName: "chevron.right")
-//                                        .foregroundColor(.gray)
                                 }
                             }
                             
                             NavigationLink(destination: Text("Change Password View")) {
                                 HStack {
                                     Text("Change Password")
-//                                    Spacer()
-//                                    Image(systemName: "chevron.right")
-//                                        .foregroundColor(.gray)
                                 }
                             }
                             
@@ -100,27 +93,18 @@ struct ProfileView: View {
                             NavigationLink(destination: Text("About Us View")) {
                                 HStack {
                                     Text("About Us")
-//                                    Spacer()
-//                                    Image(systemName: "chevron.right")
-//                                        .foregroundColor(.gray)
                                 }
                             }
                             
                             NavigationLink(destination: Text("Privacy Policy View")) {
                                 HStack {
                                     Text("Privacy Policy")
-//                                    Spacer()
-//                                    Image(systemName: "chevron.right")
-//                                        .foregroundColor(.gray)
                                 }
                             }
                             
                             NavigationLink(destination: Text("Terms and Conditions View")) {
                                 HStack {
                                     Text("Terms and Conditions")
-//                                    Spacer()
-//                                    Image(systemName: "chevron.right")
-//                                        .foregroundColor(.gray)
                                 }
                             }
                         }
@@ -128,7 +112,7 @@ struct ProfileView: View {
                     .background(Color("LightGray"))
                 }
                 .background(Color("LightGray").ignoresSafeArea())
-            }
+            
         } else {
             SignInWithAppleView()
         }

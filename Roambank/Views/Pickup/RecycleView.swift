@@ -63,15 +63,21 @@ struct RecycleView: View {
                     Button(action: {
                         navigateToProfile = true
                     }) {
+                        ZStack {
+                            Circle()
+                                .fill(Color.white)
+                                .frame(width: 50, height: 50)
+                                .shadow(radius: 2)
                         Image(systemName: "person.circle.fill")
                             .resizable()
                             .frame(width: 35, height: 35)
                             .foregroundColor(.primary)
                             .padding()
+                        }
                     }
                 }
-                    .frame(height: 0)
-                .padding(.top, 0) // Adjust this value to move the button higher
+//                    .frame(height: 0)
+//                .padding(.top, 0) // Adjust this value to move the button higher
                 , alignment: .topTrailing
             )
         }

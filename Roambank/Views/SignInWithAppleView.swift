@@ -13,6 +13,7 @@ struct SignInWithAppleView: View {
     
     var body: some View {
         VStack {
+            Text("Anda belom signin kocak 🥰👮🏿‍♀️🫃🏿")
             Spacer()
             SignInWithAppleButton(
                 .signIn,
