@@ -9,7 +9,7 @@ import SwiftUI
 import Observation
 
 struct ContributionView: View {
-    let wastes: [Waste]
+    @State private var wastes: [Contribution] = []
     @State private var showingSheet = false
     @State private var selectedOption = "CO2"
     
@@ -127,35 +127,28 @@ struct ContributionView: View {
         }
     }
     
-    func calculateCO2(waste: Waste) -> Double {
+    func calculateCO2(waste: Contribution) -> Double {
         let multiplier: Double
         switch waste.wasteType.nama {
         case "Plastik":
-            multiplier = 1.03
-        case "Kertas", "Kaca", "Logam":
-            multiplier = 1.00
+            multiplier = 1.006975
+        case "Kertas":
+            multiplier = 0.99608884
+        case "Kaca":
+            multiplier = 0.99518166
+        case "Logam":
+            multiplier = 1.0001712
         default:
             multiplier = 1.00 // Default multiplier jika jenis limbah tidak dikenali
         }
         return Double(waste.berat) * multiplier
     }
     
-    func calculateTree(waste: Waste) -> Double {
-            let treeMultiplier: Double
-            switch waste.wasteType.nama {
-            case "Plastik":
-                treeMultiplier = 0.5
-            case "Kertas":
-                treeMultiplier = 0.3
-            case "Kaca":
-                treeMultiplier = 0.4
-            case "Logam":
-                treeMultiplier = 0.2
-            default:
-                treeMultiplier = 0.25 // Default multiplier jika jenis limbah tidak dikenali
-            }
-            return Double(waste.berat) * treeMultiplier
-        }
+    func calculateTree(waste: Contribution) -> Double {
+        let co2 = calculateCO2(waste: waste)
+        let treeMultiplier = 1.0 / 21.0
+        return co2 * treeMultiplier
+    }
 }
 
 struct SheetView: View {

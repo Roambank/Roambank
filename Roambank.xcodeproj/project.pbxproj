@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		106AC2372C4F5FBF008419F8 /* ContributionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106AC2362C4F5FBF008419F8 /* ContributionView.swift */; };
 		10D6024A2C5098CA00EA815E /* ContributionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D602492C5098CA00EA815E /* ContributionViewModel.swift */; };
+		10D6024E2C52091D00EA815E /* Contribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D6024D2C52091D00EA815E /* Contribution.swift */; };
 		434CA2AA2C4F55950098C92E /* RoambankApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA2A92C4F55950098C92E /* RoambankApp.swift */; };
 		434CA2AC2C4F55950098C92E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA2AB2C4F55950098C92E /* ContentView.swift */; };
 		434CA2AE2C4F55960098C92E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 434CA2AD2C4F55960098C92E /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		106AC2362C4F5FBF008419F8 /* ContributionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionView.swift; sourceTree = "<group>"; };
 		10D602492C5098CA00EA815E /* ContributionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionViewModel.swift; sourceTree = "<group>"; };
+		10D6024D2C52091D00EA815E /* Contribution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contribution.swift; sourceTree = "<group>"; };
 		434CA2A62C4F55950098C92E /* Roambank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roambank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		434CA2A92C4F55950098C92E /* RoambankApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoambankApp.swift; sourceTree = "<group>"; };
 		434CA2AB2C4F55950098C92E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -152,6 +154,9 @@
 				434CA3452C4F59B40098C92E /* User.swift */,
 				434CA3482C4F59B40098C92E /* Waste.swift */,
 				434CA3472C4F59B40098C92E /* WasteType.swift */,
+				434CA3552C4F69C10098C92E /* WasteItem.swift */,
+				10D6024D2C52091D00EA815E /* Contribution.swift */,
+				434CA3572C4F9FCA0098C92E /* Step.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -246,6 +251,8 @@
 				434CA33D2C4F59890098C92E /* LocationPickerView.swift in Sources */,
 				434CA3492C4F59B40098C92E /* Rombeng.swift in Sources */,
 				434CA2AC2C4F55950098C92E /* ContentView.swift in Sources */,
+				434CA3562C4F69C10098C92E /* WasteItem.swift in Sources */,
+				10D6024E2C52091D00EA815E /* Contribution.swift in Sources */,
 				434CA3402C4F59890098C92E /* WasteDetail.swift in Sources */,
 				434CA34C2C4F59B40098C92E /* Order.swift in Sources */,
 				106AC2372C4F5FBF008419F8 /* ContributionView.swift in Sources */,
