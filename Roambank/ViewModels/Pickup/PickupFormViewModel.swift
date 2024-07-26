@@ -20,7 +20,10 @@ class PickupFormViewModel: ObservableObject {
     @Published var navigateToConfirmation = false
     @Published var createdOrder: Order?
     
-    let user = User(nama: "John Doe", noHP: "08123456789", alamat: "Jl. Example No. 123, Surabaya")
+    @AppStorage("firstName") private var firstName: String = ""
+    @AppStorage("lastName") private var lastName: String = ""
+    @AppStorage("email") private var email: String = ""
+    
     let timeSlots = ["6:00-9:00", "12:00-15:00", "18:00-21:00"]
     
     func createOrder() -> Order? {
@@ -39,7 +42,8 @@ class PickupFormViewModel: ObservableObject {
             totalPoin += Int(waste.berat * Double(waste.wasteType.poinPerKilo))
         }
         
-        let rombeng = Rombeng(nama: "John Doe", wilayah: "Surabaya")
+        let user = User(nama: "\(firstName) \(lastName)", noHP: "08123456789", alamat: location)
+        let rombeng = Rombeng(nama: "\(firstName) \(lastName)", wilayah: "Surabaya")
         
         let order = Order(
             user: user,
