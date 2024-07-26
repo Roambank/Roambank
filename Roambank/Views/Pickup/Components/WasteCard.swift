@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WasteCard: View {
-    @Binding var selectedWastes: [Waste]
+    @Binding var selectedWastes: [WasteOrder]
     @State private var digitData = 0.0
     @State var showSheet: Bool = false
     var wasteType: WasteType
@@ -27,7 +27,7 @@ struct WasteCard: View {
                                 Image(wasteType.gambar)
                             )
                             .sheet(isPresented: $showSheet, content: {
-                                WasteDetailView(wasteType: wasteType)
+                                WasteDetailView(digitData: $digitData, wasteType: wasteType)
                             })
                             .onTapGesture {
                                 showSheet.toggle()
@@ -60,9 +60,9 @@ struct WasteCard: View {
                                         if newValue > 0 {
                                             // Tambah atau perbarui item di daftar
                                             if let index = selectedWastes.firstIndex(where: { $0.wasteType.nama == wasteType.nama }) {
-                                                selectedWastes[index].berat = Int(newValue)
+                                                selectedWastes[index].berat = newValue
                                             } else {
-                                                let waste = Waste(wasteType: wasteType, berat: Int(newValue))
+                                                let waste = WasteOrder(wasteType: wasteType, berat: newValue)
                                                 selectedWastes.append(waste)
                                             }
                                         } else {

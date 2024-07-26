@@ -9,9 +9,9 @@ import SwiftUI
 
 struct WasteDetailView: View {
     @Environment(\.dismiss) var dismiss
-    @State private var digitData = 0.0
+    @Binding var digitData: Double
     var wasteType: WasteType
-
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -22,35 +22,48 @@ struct WasteDetailView: View {
                         .font(.system(size: 14, weight: .regular))
                     ScrollView(.horizontal) {
                         HStack {
-                            VStack {
-                                RoundedRectangle(cornerRadius: 12)
-                                    .fill(Color(.secondarySystemBackground))
-                                    .frame(width: 120, height: 120)
-                                    .overlay(
-                                        Image(wasteType.gambar)
-                                    )
-                                Text(wasteType.nama)
-                                    .font(.system(size: 18, weight: .regular))
+                            ForEach(wasteType.wasteItems) { wasteItem in
+                                VStack {
+                                    RoundedRectangle(cornerRadius: 12)
+                                        .fill(Color(.secondarySystemBackground))
+                                        .frame(width: 120, height: 120)
+                                        .overlay(
+                                            Image(wasteItem.image)
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(width: 100, height: 100)
+                                        )
+                                    Text(wasteItem.name)
+                                        .font(.system(size: 18, weight: .regular))
+                                }
+                                .padding(.horizontal, 10)
+                                .padding(.vertical, 10)
+                                .background(Color(.tertiarySystemBackground))
+                                .clipShape(RoundedRectangle(cornerRadius: 8))
                             }
-                            .padding(.horizontal, 10)
-                            .padding(.vertical, 10)
-                            .background(Color(.tertiarySystemBackground))
-                            .clipShape(RoundedRectangle(cornerRadius: 8))
                         }
                     }
                     .padding(.bottom, 23)
-
+                    
                     Text("Siapkan sampahmu")
                         .font(.system(size: 16, weight: .medium))
                     Text("Bantu kami dengan mengemas produk dengan bersih")
                         .font(.system(size: 14, weight: .regular))
-
-                    Image("prep")
-                    Rectangle()
-                        .frame(height: 1)
-                        .opacity(0.2)
-                        .padding(.bottom, 17)
-
+                    
+                    ScrollView(.vertical) {
+                        ForEach(wasteType.steps) { step in
+                            VStack(alignment: .leading) {
+                                Image(step.image)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 300, height: 200)
+                                Text(step.description)
+                                    .font(.system(size: 14, weight: .regular))
+                            }
+                            .padding(.bottom, 16)
+                        }
+                    }
+                    
                     HStack {
                         Text("Estimasi berat")
                             .font(.system(size: 16, weight: .medium))
@@ -58,9 +71,9 @@ struct WasteDetailView: View {
                         CustomStepper(digitData: $digitData)
                     }
                     .padding(.bottom, 16)
-
+                    
                     Button(action: {
-                        // Code
+                        dismiss()
                     }) {
                         Text("Add item")
                             .font(.system(size: 16, weight: .semibold))
@@ -81,7 +94,7 @@ struct WasteDetailView: View {
                         Spacer()
                     }
                 }
-
+                
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         dismiss()
@@ -96,3 +109,4 @@ struct WasteDetailView: View {
         }
     }
 }
+

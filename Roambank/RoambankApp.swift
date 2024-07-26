@@ -11,7 +11,7 @@ import SwiftUI
 struct RoambankApp: App {
     var body: some Scene {
         WindowGroup {
-            WasteCategoryView()
+            HomeView()
         }
     }
 }

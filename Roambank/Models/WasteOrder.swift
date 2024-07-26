@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct Waste: Identifiable {
+struct WasteOrder: Identifiable {
     let id: UUID
     let wasteType: WasteType
-    var berat: Int
+    var berat: Double
     
-    init(id: UUID = UUID(), wasteType: WasteType, berat: Int) {
+    init(id: UUID = UUID(), wasteType: WasteType, berat: Double) {
         self.id = id
         self.wasteType = wasteType
         self.berat = berat

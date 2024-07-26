@@ -26,7 +26,6 @@ struct ContributionView: View {
             Image("ContributionBackground")
                 .resizable()
                 .scaledToFill()
-                .ignoresSafeArea()
             
             VStack {
                 Spacer()

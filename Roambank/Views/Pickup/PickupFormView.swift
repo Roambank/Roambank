@@ -11,8 +11,10 @@ struct PickupFormView: View {
     @StateObject private var viewModel = PickupFormViewModel()
     @State private var showingLocationPicker = false
     @State private var selectedLocation: String = ""
+    @State private var detailLocation: String = ""
+    @Binding var navigateFromRecycle: Bool
     
-    var selectedWastes: [Waste]
+    var selectedWastes: [WasteOrder]
     
     var body: some View {
         VStack {
@@ -23,7 +25,7 @@ struct PickupFormView: View {
                             Text(waste.wasteType.nama)
                                 .font(.body)
                             Spacer()
-                            Text("\(waste.berat) Kg")
+                            Text("\(waste.berat, specifier: "%.1f") Kg")
                                 .font(.body)
                                 .foregroundColor(.green)
                         }
@@ -41,7 +43,7 @@ struct PickupFormView: View {
                 }
                 
                 Section(header: Text("PICK UP LOCATION")) {
-                    NavigationLink(destination: MapView()) {
+                    NavigationLink(destination: MapView(selectedLocation: $selectedLocation, detailLocation: $detailLocation)) {
                         HStack {
                             Image(systemName: "mappin.circle.fill")
                                 .foregroundColor(.green)
@@ -55,6 +57,9 @@ struct PickupFormView: View {
                                 } else {
                                     Text(selectedLocation)
                                         .font(.headline)
+                                    Text(detailLocation)
+                                        .font(.subheadline)
+                                        .foregroundColor(.gray)
                                     TextField("Notes", text: $viewModel.locationNotes)
                                         .font(.subheadline)
                                         .foregroundColor(.gray)
@@ -69,6 +74,9 @@ struct PickupFormView: View {
             Button(action: {
                 viewModel.selectedWaste = selectedWastes
                 viewModel.location = selectedLocation
+                viewModel.detailLocation = detailLocation
+                viewModel.createdOrder = viewModel.createOrder()
+                viewModel.navigateToConfirmation = true
                 viewModel.createSchedule()
             }) {
                 Text("Create Schedule")
@@ -84,12 +92,16 @@ struct PickupFormView: View {
             }
         }
         .navigationTitle("Schedule Pickup")
+        .navigationDestination(isPresented: $viewModel.navigateToConfirmation) {
+            if let order = viewModel.createdOrder {
+                ConfirmationView(order: order, navigateFromRecycle: $navigateFromRecycle)
+            }
+        }
     }
-    
 }
 
 struct PickupFormView_Previews: PreviewProvider {
     static var previews: some View {
-        PickupFormView(selectedWastes: [])
+        PickupFormView(navigateFromRecycle: .constant(false), selectedWastes: [])
     }
 }
