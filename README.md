@@ -21,7 +21,7 @@
 9. [License](#license)
 
 ## Overview
-Recykloo is an innovative waste management application that enables users to responsibly recycle their waste by requesting pick-up services. 
+Roambank is an innovative waste management application that enables users to responsibly recycle their waste by requesting pick-up services. 
 The app provides detailed preparation steps for different types of waste, helping users to prepare their waste properly and earn more rewards from waste banks or communities. 
 Additionally, the app allows users to track their contributions, supporting further engagement with waste management initiatives.
 
