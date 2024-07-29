@@ -12,6 +12,7 @@ struct WasteCategoryView: View {
     @State private var navigateToPickupFormView = false
     @State private var selectedWastes: [WasteOrder] = []
     @Binding var navigateFromRecycle: Bool
+    @State private var selectedCategory: String = "All"
     
     let wasteTypes = [
         WasteType(nama: "Botol Plastik", gambar: "waterbottle", poinPerKilo: 10, category: "Plastik", wasteItems: [
@@ -52,28 +53,50 @@ struct WasteCategoryView: View {
         ]),
     ]
     
+    var filteredWasteTypes: [WasteType] {
+        wasteTypes.filter { wasteType in
+            (selectedCategory == "All" || wasteType.category == selectedCategory) &&
+            (searchText.isEmpty || wasteType.nama.lowercased().contains(searchText.lowercased()) ||
+             wasteType.wasteItems.contains { $0.name.lowercased().contains(searchText.lowercased()) })
+        }
+    }
+    
     var body: some View {
         VStack {
             ScrollView(.horizontal) {
                 HStack(spacing: 8) {
-                    CategoryButton(wasteCategory: "All")
-                    CategoryButton(wasteCategory: "Plastik")
-                    CategoryButton(wasteCategory: "Kertas")
-                    CategoryButton(wasteCategory: "Logam")
-                    CategoryButton(wasteCategory: "Kaleng")
-                    CategoryButton(wasteCategory: "Kain")
+                    CategoryButton(wasteCategory: "All", isSelected: selectedCategory == "All") {
+                        selectedCategory = "All"
+                    }
+                    CategoryButton(wasteCategory: "Plastik", isSelected: selectedCategory == "Plastik") {
+                        selectedCategory = "Plastik"
+                    }
+                    CategoryButton(wasteCategory: "Kertas", isSelected: selectedCategory == "Kertas") {
+                        selectedCategory = "Kertas"
+                    }
+                    CategoryButton(wasteCategory: "Logam", isSelected: selectedCategory == "Logam") {
+                        selectedCategory = "Logam"
+                    }
+                    CategoryButton(wasteCategory: "Kaleng", isSelected: selectedCategory == "Kaleng") {
+                        selectedCategory = "Kaleng"
+                    }
+                    CategoryButton(wasteCategory: "Kain", isSelected: selectedCategory == "Kain") {
+                        selectedCategory = "Kain"
+                    }
                 }
             }
             .padding(.horizontal, 16)
+            
             ScrollView(.vertical) {
                 VStack(spacing: 0) {
-                    ForEach(wasteTypes, id: \.nama) { wasteType in
+                    ForEach(filteredWasteTypes, id: \.nama) { wasteType in
                         WasteCard(selectedWastes: $selectedWastes, wasteType: wasteType)
                     }
                 }
                 Spacer()
             }
             .padding(.bottom, 1)
+            
             Rectangle()
                 .fill(Color(.systemBackground))
                 .frame(height: 70)
@@ -115,10 +138,6 @@ struct WasteCategoryView: View {
                         }
                     }
                 }
-            //                ZStack(alignment: .bottom) {
-            //
-            //
-            //                }
         }
         .searchable(
             text: $searchText,
@@ -133,18 +152,18 @@ struct WasteCategoryView: View {
 }
 
 struct CategoryButton: View {
-    var wasteCategory: String = ""
+    var wasteCategory: String
+    var isSelected: Bool
+    var action: () -> Void
     
     var body: some View {
-        Button(action: {
-            // Code
-        }) {
+        Button(action: action) {
             Text(wasteCategory)
                 .font(.system(size: 12, weight: .semibold))
                 .padding(.horizontal, 15)
                 .padding(.vertical, 10)
-                .foregroundColor(Color("Ijo"))
-                .background(Color("Ijo").opacity(0.1))
+                .foregroundColor(isSelected ? .white : Color("Ijo"))
+                .background(isSelected ? Color("Ijo") : Color("Ijo").opacity(0.1))
                 .cornerRadius(50)
         }
     }
