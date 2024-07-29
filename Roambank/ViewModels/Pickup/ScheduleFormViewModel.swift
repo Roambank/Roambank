@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class PickupFormViewModel: ObservableObject {
+class ScheduleFormViewModel: ObservableObject {
     @Published var selectedWaste: [WasteOrder] = []
     @Published var selectedDate: Date = Date()
     @Published var selectedTime: String = ""

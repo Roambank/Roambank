@@ -21,7 +21,7 @@ struct MapItem: Identifiable, Hashable {
     }
 }
 
-struct MapView: View {
+struct MapFormView: View {
     @Binding var selectedLocation: String
     @Binding var detailLocation: String
     @Environment(\.presentationMode) var presentationMode
@@ -151,8 +151,8 @@ extension MKCoordinateRegion {
     }
 }
 
-struct MapView_Previews: PreviewProvider {
+struct MapFormView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView(selectedLocation: .constant(""), detailLocation: .constant(""))
+        MapFormView(selectedLocation: .constant(""), detailLocation: .constant(""))
     }
 }

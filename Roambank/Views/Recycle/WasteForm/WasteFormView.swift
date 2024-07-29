@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WasteCategoryView: View {
+struct WasteFormView: View {
     @State private var searchText: String = ""
     @State private var navigateToPickupFormView = false
     @State private var selectedWastes: [WasteOrder] = []
@@ -65,22 +65,22 @@ struct WasteCategoryView: View {
         VStack {
             ScrollView(.horizontal) {
                 HStack(spacing: 8) {
-                    CategoryButton(wasteCategory: "All", isSelected: selectedCategory == "All") {
+                    CategoryFilterButton(wasteCategory: "All", isSelected: selectedCategory == "All") {
                         selectedCategory = "All"
                     }
-                    CategoryButton(wasteCategory: "Plastik", isSelected: selectedCategory == "Plastik") {
+                    CategoryFilterButton(wasteCategory: "Plastik", isSelected: selectedCategory == "Plastik") {
                         selectedCategory = "Plastik"
                     }
-                    CategoryButton(wasteCategory: "Kertas", isSelected: selectedCategory == "Kertas") {
+                    CategoryFilterButton(wasteCategory: "Kertas", isSelected: selectedCategory == "Kertas") {
                         selectedCategory = "Kertas"
                     }
-                    CategoryButton(wasteCategory: "Logam", isSelected: selectedCategory == "Logam") {
+                    CategoryFilterButton(wasteCategory: "Logam", isSelected: selectedCategory == "Logam") {
                         selectedCategory = "Logam"
                     }
-                    CategoryButton(wasteCategory: "Kaleng", isSelected: selectedCategory == "Kaleng") {
+                    CategoryFilterButton(wasteCategory: "Kaleng", isSelected: selectedCategory == "Kaleng") {
                         selectedCategory = "Kaleng"
                     }
-                    CategoryButton(wasteCategory: "Kain", isSelected: selectedCategory == "Kain") {
+                    CategoryFilterButton(wasteCategory: "Kain", isSelected: selectedCategory == "Kain") {
                         selectedCategory = "Kain"
                     }
                 }
@@ -146,31 +146,13 @@ struct WasteCategoryView: View {
         .navigationTitle("Ajukan Penjemputan")
         .navigationBarTitleDisplayMode(.inline)
         .navigationDestination(isPresented: $navigateToPickupFormView) {
-            PickupFormView(navigateFromRecycle: $navigateFromRecycle, selectedWastes: selectedWastes)
+            ScheduleFormView(navigateFromRecycle: $navigateFromRecycle, selectedWastes: selectedWastes)
         }
     }
 }
 
-struct CategoryButton: View {
-    var wasteCategory: String
-    var isSelected: Bool
-    var action: () -> Void
-    
-    var body: some View {
-        Button(action: action) {
-            Text(wasteCategory)
-                .font(.system(size: 12, weight: .semibold))
-                .padding(.horizontal, 15)
-                .padding(.vertical, 10)
-                .foregroundColor(isSelected ? .white : Color("Ijo"))
-                .background(isSelected ? Color("Ijo") : Color("Ijo").opacity(0.1))
-                .cornerRadius(50)
-        }
-    }
-}
-
-struct WasteCategoryView_Previews: PreviewProvider {
+struct WasteFormView_Previews: PreviewProvider {
     static var previews: some View {
-        WasteCategoryView(navigateFromRecycle: .constant(false))
+        WasteFormView(navigateFromRecycle: .constant(false))
     }
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct ContentView: View {
     var body: some View {
         TabView {
             RecycleView()
@@ -44,6 +44,6 @@ struct GuideView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        ContentView()
     }
 }

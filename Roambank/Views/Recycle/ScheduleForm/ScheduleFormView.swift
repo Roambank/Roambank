@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct PickupFormView: View {
-    @StateObject private var viewModel = PickupFormViewModel()
+struct ScheduleFormView: View {
+    @StateObject private var viewModel = ScheduleFormViewModel()
     @State private var showingLocationPicker = false
     @State private var selectedLocation: String = ""
     @State private var detailLocation: String = ""
@@ -43,7 +43,7 @@ struct PickupFormView: View {
                 }
                 
                 Section(header: Text("PICK UP LOCATION")) {
-                    NavigationLink(destination: MapView(selectedLocation: $selectedLocation, detailLocation: $detailLocation)) {
+                    NavigationLink(destination: MapFormView(selectedLocation: $selectedLocation, detailLocation: $detailLocation)) {
                         HStack {
                             Image(systemName: "mappin.circle.fill")
                                 .foregroundColor(.green)
@@ -100,8 +100,8 @@ struct PickupFormView: View {
     }
 }
 
-struct PickupFormView_Previews: PreviewProvider {
+struct ScheduleFormView_Previews: PreviewProvider {
     static var previews: some View {
-        PickupFormView(navigateFromRecycle: .constant(false), selectedWastes: [])
+        ScheduleFormView(navigateFromRecycle: .constant(false), selectedWastes: [])
     }
 }
