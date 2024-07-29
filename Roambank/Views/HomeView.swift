@@ -7,39 +7,30 @@
 
 import SwiftUI
 
-struct HomeView: View {    
+struct HomeView: View {
     var body: some View {
         TabView {
             RecycleView()
                 .tabItem {
-                    Image(systemName: "arrow.2.circlepath.circle")
+                    Image(systemName: "arrow.3.trianglepath")
                     Text("Recycle")
                 }
 
             ContributionView()
                 .tabItem {
-                    Image(systemName: "chart.bar")
+                    Image(systemName: "leaf")
                     Text("Contributions")
                 }
 
             GuideView()
                 .tabItem {
-                    Image(systemName: "book")
+                    Image(systemName: "lightbulb.max")
                     Text("Guide")
                 }
         }
+        .accentColor(Color("Ijo"))
     }
 }
-
-//struct ContributionView: View {
-//    var body: some View {
-//        VStack {
-//            Text("Contribution Content")
-//            // Add your Contribution page content here
-//        }
-//        .navigationTitle("Kontribusi")
-//    }
-//}
 
 struct GuideView: View {
     var body: some View {
