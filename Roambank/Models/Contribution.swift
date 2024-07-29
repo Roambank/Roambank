@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Contribution: Identifiable {
+struct Contribution: Codable, Identifiable {
     let id: UUID
     let userId: User.ID
     let wasteType: WasteType
@@ -21,3 +21,4 @@ struct Contribution: Identifiable {
         self.berat = wasteOrder.berat
     }
 }
+

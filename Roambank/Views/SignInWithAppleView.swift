@@ -11,6 +11,8 @@ import AuthenticationServices
 struct SignInWithAppleView: View {
     @Environment(\.colorScheme) var colorScheme
     
+    @State var viewModel: SignInWithAppleViewModel = SignInWithAppleViewModel()
+    
     var body: some View {
         VStack {
             Spacer()
@@ -28,6 +30,9 @@ struct SignInWithAppleView: View {
                             let userFirstName = appleIDCredential.fullName?.givenName
                             let userLastName = appleIDCredential.fullName?.familyName
                             let userEmail = appleIDCredential.email
+                            
+                            let newUser = User(id: UUID(), nama: userFirstName ?? "", noHP: "", alamat: "", email: userEmail ?? "")
+                            viewModel.addUser(newUser: newUser)
                             
                             // Store the user data in AppStorage
                             if let firstName = userFirstName, let lastName = userLastName, let email = userEmail {
@@ -56,3 +61,4 @@ struct SignInWithAppleView_Previews: PreviewProvider {
         SignInWithAppleView()
     }
 }
+

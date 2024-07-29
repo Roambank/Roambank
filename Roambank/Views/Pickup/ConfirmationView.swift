@@ -144,10 +144,9 @@ struct ConfirmationView_Previews: PreviewProvider {
             hari: "Mon, 24 Jul 2024",
             lokasi: "Some Address",
             detailLokasi: "Near the entrance",
-            status: "Pending",
+            keteranganLokasi: "Some notes", status: "Pending",
             rombeng: Rombeng(nama: "John Doe", wilayah: "Surabaya"),
-            poin: 25,
-            keteranganLokasi: "Some notes"
+            poin: 25
         )
         
         return ConfirmationView(order: sampleOrder, navigateFromRecycle: .constant(false))

@@ -10,6 +10,8 @@
 		106AC2372C4F5FBF008419F8 /* ContributionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106AC2362C4F5FBF008419F8 /* ContributionView.swift */; };
 		10D6024A2C5098CA00EA815E /* ContributionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D602492C5098CA00EA815E /* ContributionViewModel.swift */; };
 		10D6024E2C52091D00EA815E /* Contribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D6024D2C52091D00EA815E /* Contribution.swift */; };
+		10D602882C57482200EA815E /* SignInWithAppleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D602872C57482200EA815E /* SignInWithAppleViewModel.swift */; };
+		10D6028A2C574AEB00EA815E /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D602892C574AEB00EA815E /* Const.swift */; };
 		434CA2AA2C4F55950098C92E /* RoambankApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA2A92C4F55950098C92E /* RoambankApp.swift */; };
 		434CA2AC2C4F55950098C92E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA2AB2C4F55950098C92E /* ContentView.swift */; };
 		434CA2AE2C4F55960098C92E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 434CA2AD2C4F55960098C92E /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 		106AC2362C4F5FBF008419F8 /* ContributionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionView.swift; sourceTree = "<group>"; };
 		10D602492C5098CA00EA815E /* ContributionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionViewModel.swift; sourceTree = "<group>"; };
 		10D6024D2C52091D00EA815E /* Contribution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contribution.swift; sourceTree = "<group>"; };
+		10D602872C57482200EA815E /* SignInWithAppleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleViewModel.swift; sourceTree = "<group>"; };
+		10D602892C574AEB00EA815E /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		434CA2A62C4F55950098C92E /* Roambank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roambank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		434CA2A92C4F55950098C92E /* RoambankApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoambankApp.swift; sourceTree = "<group>"; };
 		434CA2AB2C4F55950098C92E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 			children = (
 				43DD09AB2C520C39009B0786 /* Roambank.entitlements */,
 				434CA3532C4F5A920098C92E /* Info.plist */,
+				10D602892C574AEB00EA815E /* Const.swift */,
 				434CA3352C4F59710098C92E /* Models */,
 				434CA3342C4F596B0098C92E /* Views */,
 				434CA32E2C4F59420098C92E /* ViewModels */,
@@ -134,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				10D602492C5098CA00EA815E /* ContributionViewModel.swift */,
+				10D602872C57482200EA815E /* SignInWithAppleViewModel.swift */,
 				434CA32F2C4F594F0098C92E /* Pickup */,
 			);
 			path = ViewModels;
@@ -282,10 +288,12 @@
 				106AC2372C4F5FBF008419F8 /* ContributionView.swift in Sources */,
 				434CA3522C4F59C70098C92E /* MapView.swift in Sources */,
 				434CA33F2C4F59890098C92E /* CustomStepper.swift in Sources */,
+				10D6028A2C574AEB00EA815E /* Const.swift in Sources */,
 				434CA2AA2C4F55950098C92E /* RoambankApp.swift in Sources */,
 				434CA34A2C4F59B40098C92E /* Penjemputan.swift in Sources */,
 				434CA34E2C4F59B40098C92E /* WasteOrder.swift in Sources */,
 				434CA3412C4F59890098C92E /* PickupFormView.swift in Sources */,
+				10D602882C57482200EA815E /* SignInWithAppleViewModel.swift in Sources */,
 				10D6024A2C5098CA00EA815E /* ContributionViewModel.swift in Sources */,
 				434CA33E2C4F59890098C92E /* WasteCard.swift in Sources */,
 				434CA3322C4F595C0098C92E /* MapViewModel.swift in Sources */,

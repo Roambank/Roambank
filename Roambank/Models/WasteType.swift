@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct WasteType: Identifiable {
+struct WasteType: Codable, Identifiable {
     let id: UUID
     let nama: String
     let gambar: String

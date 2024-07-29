@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct WasteOrder: Identifiable {
+struct WasteOrder: Codable, Identifiable {
     let id: UUID
     let wasteType: WasteType
     var berat: Double
