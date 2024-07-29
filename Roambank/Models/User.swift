@@ -12,12 +12,14 @@ struct User: Identifiable {
     let nama: String
     let noHP: String
     let alamat: String
+    let email: String
     
-    init(id: UUID = UUID(), nama: String, noHP: String, alamat: String) {
+    init(id: UUID = UUID(), nama: String, noHP: String, alamat: String, email: String) {
         self.id = id
         self.nama = nama
         self.noHP = noHP
         self.alamat = alamat
+        self.email = email
     }
 }
 

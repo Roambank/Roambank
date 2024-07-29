@@ -135,7 +135,7 @@ struct ConfirmationView_Previews: PreviewProvider {
             WasteOrder(wasteType: WasteType(nama: "Kardus", gambar: "kardus.png", poinPerKilo: 5, category: "Kertas", wasteItems: [], steps: []), berat: 5.0)
         ]
         
-        let sampleUser = User(nama: "John Doe", noHP: "08123456789", alamat: "Jl. Example No. 123, Surabaya")
+        let sampleUser = User(nama: "John Doe", noHP: "08123456789", alamat: "Jl. Example No. 123, Surabaya", email: "Joni@gmail.com")
         
         let sampleOrder = Order(
             user: sampleUser,

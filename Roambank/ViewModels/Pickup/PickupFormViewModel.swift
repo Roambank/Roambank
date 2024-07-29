@@ -42,7 +42,7 @@ class PickupFormViewModel: ObservableObject {
             totalPoin += Int(waste.berat * Double(waste.wasteType.poinPerKilo))
         }
         
-        let user = User(nama: "\(firstName) \(lastName)", noHP: "08123456789", alamat: location)
+        let user = User(nama: "\(firstName) \(lastName)", noHP: "08123456789", alamat: location, email: "\(email)" )
         let rombeng = Rombeng(nama: "\(firstName) \(lastName)", wilayah: "Surabaya")
         
         let order = Order(
