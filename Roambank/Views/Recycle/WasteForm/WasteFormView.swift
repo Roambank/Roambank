@@ -13,6 +13,7 @@ struct WasteFormView: View {
     @State private var selectedWastes: [WasteOrder] = []
     @Binding var navigateFromRecycle: Bool
     @State private var selectedCategory: String = "All"
+    @State private var showAlert = false
     
     let wasteTypes = [
         WasteType(nama: "Botol Plastik", gambar: "waterbottle", poinPerKilo: 10, category: "Plastik", wasteItems: [
@@ -103,7 +104,7 @@ struct WasteFormView: View {
                 .overlay {
                     HStack {
                         Button(action: {
-                            // Code
+                            // Code for added items
                         }) {
                             HStack {
                                 Image(systemName: "list.dash")
@@ -126,7 +127,11 @@ struct WasteFormView: View {
                             )
                         }
                         Button(action: {
-                            navigateToPickupFormView = true
+                            if selectedWastes.isEmpty {
+                                showAlert = true
+                            } else {
+                                navigateToPickupFormView = true
+                            }
                         }) {
                             Text("Continue")
                                 .font(.system(size: 16, weight: .semibold))
@@ -137,6 +142,9 @@ struct WasteFormView: View {
                                 .cornerRadius(8)
                         }
                     }
+                }
+                .alert(isPresented: $showAlert) {
+                    Alert(title: Text("Error"), message: Text("Please select at least one waste item."), dismissButton: .default(Text("OK")))
                 }
         }
         .searchable(

@@ -154,7 +154,7 @@
 		434CA32E2C4F59420098C92E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				10D602492C5098CA00EA815E /* ContributionViewModel.swift */,
+				43FC0DCF2C575039005E04CB /* Contribution */,
 				434CA32F2C4F594F0098C92E /* Pickup */,
 			);
 			path = ViewModels;
@@ -291,6 +291,14 @@
 				43FC0DCD2C5748F7005E04CB /* OrderHistoryRow.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		43FC0DCF2C575039005E04CB /* Contribution */ = {
+			isa = PBXGroup;
+			children = (
+				10D602492C5098CA00EA815E /* ContributionViewModel.swift */,
+			);
+			path = Contribution;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
