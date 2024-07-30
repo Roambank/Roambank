@@ -120,7 +120,7 @@ class PickupFormViewModel: ObservableObject {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
         do {
-            let requestData = AddOrderRequestData(feature: Const.addUserEP, orderData: newOrder)
+            let requestData = AddOrderRequestData(feature: Const.addOrderEP, orderData: newOrder)
             let jsonData = try JSONEncoder().encode(requestData)
             print(String(data: jsonData, encoding: .utf8) ?? "")
             request.httpBody = jsonData
@@ -136,6 +136,7 @@ class PickupFormViewModel: ObservableObject {
                 if response.statusCode == 200 {
                     guard let data = data else { return }
                     do {
+                        print("Response:", String(data: data, encoding: .utf8) ?? "")
                         let decodedData = try JSONDecoder().decode(AddOrderResponseData.self, from: data)
                         self.addOrderResponseData = decodedData
                     }
@@ -188,5 +189,13 @@ class PickupFormViewModel: ObservableObject {
         } catch let error {
             print("Error Request:", error)
         }
+    }
+}
+
+extension Date {
+    func getStringOfDate() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter.string(from: self)
     }
 }

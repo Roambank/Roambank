@@ -23,7 +23,7 @@ struct Order: Codable, Identifiable {
     enum CodingKeys: String, CodingKey {
         case id = "OrderID"
         case user = "User"
-        case wastes
+        case wastes = "wasteOrders"
         case intervalJam = "TimeInterval"
         case hari = "Day"
         case lokasi = "Location"
@@ -60,7 +60,7 @@ struct AddOrderRequestData: Codable {
     
     enum CodingKeys: String, CodingKey {
         case feature
-        case orderData = "orderdata"
+        case orderData = "order"
     }
     
     init(from decoder: Decoder) throws {

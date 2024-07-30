@@ -12,6 +12,12 @@ struct WasteOrder: Codable, Identifiable {
     let wasteType: WasteType
     var berat: Double
     
+    enum CodingKeys: String, CodingKey {
+        case id = "WasteOrderID"
+        case wasteType = "WasteType"
+        case berat = "Weight"
+    }
+    
     init(id: UUID = UUID(), wasteType: WasteType, berat: Double) {
         self.id = id
         self.wasteType = wasteType

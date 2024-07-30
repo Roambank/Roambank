@@ -78,7 +78,7 @@ struct PickupFormView: View {
                 viewModel.createdOrder = viewModel.createOrder()
                 viewModel.navigateToConfirmation = true
                 viewModel.createSchedule()
-                let newOrder = Order(id: UUID(), user: User(), wastes: [], intervalJam: "", hari: "", lokasi: "", detailLokasi: "", keteranganLokasi: "", status: "", rombeng: Rombeng(), poin: 0)
+                let newOrder = Order(id: UUID(), user: User(), wastes: selectedWastes, intervalJam: viewModel.selectedTime, hari: viewModel.selectedDate.getStringOfDate(), lokasi: selectedLocation, detailLokasi: detailLocation, keteranganLokasi: "", status: "", rombeng: Rombeng(), poin: 0)
                 viewModel.addOrder(newOrder: newOrder)
             }) {
                 Text("Create Schedule")

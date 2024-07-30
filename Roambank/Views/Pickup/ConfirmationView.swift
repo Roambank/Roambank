@@ -138,7 +138,7 @@ struct ConfirmationView_Previews: PreviewProvider {
         let sampleUser = User(nama: "John Doe", noHP: "08123456789", alamat: "Jl. Example No. 123, Surabaya", email: "Joni@gmail.com")
         
         let sampleOrder = Order(
-            user: sampleUser,
+            id: UUID(), user: sampleUser,
             wastes: sampleWaste,
             intervalJam: "07:00 - 09:00",
             hari: "Mon, 24 Jul 2024",

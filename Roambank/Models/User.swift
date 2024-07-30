@@ -23,7 +23,7 @@ struct User: Codable, Identifiable {
     }
     
     init() {
-        self.id = UUID()
+        self.id = UUID(uuidString: "F0DEF67F-17CA-4A6B-BD26-2F8C9C02F115") ?? UUID()
         self.nama = ""
         self.noHP = ""
         self.alamat = ""
