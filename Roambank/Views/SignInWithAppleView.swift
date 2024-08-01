@@ -31,11 +31,13 @@ struct SignInWithAppleView: View {
                             let userLastName = appleIDCredential.fullName?.familyName
                             let userEmail = appleIDCredential.email
                             
-                            let newUser = User(id: UUID(), nama: userFirstName ?? "", noHP: "", alamat: "", email: userEmail ?? "")
+                            let userId = UUID()
+                            let newUser = User(id: userId, nama: userFirstName ?? "", noHP: "", alamat: "", email: userEmail ?? "")
                             viewModel.addUser(newUser: newUser)
                             
                             // Store the user data in AppStorage
                             if let firstName = userFirstName, let lastName = userLastName, let email = userEmail {
+                                UserDefaults.standard.set(userId, forKey: "userId")
                                 UserDefaults.standard.set(firstName, forKey: "firstName")
                                 UserDefaults.standard.set(lastName, forKey: "lastName")
                                 UserDefaults.standard.set(email, forKey: "email")
