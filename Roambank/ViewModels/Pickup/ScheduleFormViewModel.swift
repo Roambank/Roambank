@@ -87,7 +87,7 @@ class ScheduleFormViewModel: ObservableObject {
         - Total Points: \(order.poin)
         """
         
-        sendMessageToWhatsApp(message: message)
+//        sendMessageToWhatsApp(message: message)
     }
     
     func sendMessageToWhatsApp(message: String) {

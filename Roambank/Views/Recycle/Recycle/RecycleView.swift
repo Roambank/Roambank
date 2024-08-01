@@ -59,7 +59,7 @@ struct RecycleView: View {
         case .all:
             return orders
         case .ongoing:
-            return orders.filter { $0.status == "On going" }
+            return orders.filter { $0.status == "Ongoing" }
         case .completed:
             return orders.filter { $0.status == "Completed" }
         }
