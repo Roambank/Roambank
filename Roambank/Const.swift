@@ -8,7 +8,7 @@
 import Foundation
 
 struct Const {
-    static let baseURL = "http://lex.areveys.com/Roambank/api.php"
+    static let baseURL = "roambank.cisbyte.com/api.php"
     static let addUserEP = "addUser"
     static let addOrderEP = "addOrderWithWasteOrders"
     static let getUserBasedOnIdEP = "getUserBasedOnId"
