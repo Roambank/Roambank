@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		106AC2372C4F5FBF008419F8 /* ContributionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106AC2362C4F5FBF008419F8 /* ContributionView.swift */; };
-		10D6024A2C5098CA00EA815E /* ContributionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D602492C5098CA00EA815E /* ContributionViewModel.swift */; };
 		10D6024E2C52091D00EA815E /* Contribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D6024D2C52091D00EA815E /* Contribution.swift */; };
+		10D602882C57482200EA815E /* SignInWithAppleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D602872C57482200EA815E /* SignInWithAppleViewModel.swift */; };
+		10D6028A2C574AEB00EA815E /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D602892C574AEB00EA815E /* Const.swift */; };
 		434CA2AA2C4F55950098C92E /* RoambankApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434CA2A92C4F55950098C92E /* RoambankApp.swift */; };
 		434CA2AE2C4F55960098C92E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 434CA2AD2C4F55960098C92E /* Assets.xcassets */; };
 		434CA2B12C4F55960098C92E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 434CA2B02C4F55960098C92E /* Preview Assets.xcassets */; };
@@ -34,6 +35,7 @@
 		43DD09A92C50BA25009B0786 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DD09A82C50BA25009B0786 /* ContentView.swift */; };
 		43DD09AD2C521196009B0786 /* SignInWithAppleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DD09AC2C521196009B0786 /* SignInWithAppleView.swift */; };
 		43DD09AF2C521685009B0786 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DD09AE2C521685009B0786 /* ProfileView.swift */; };
+		43F6D70D2C6CE6C6002D57C4 /* ContributionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F6D70C2C6CE6C6002D57C4 /* ContributionViewModel.swift */; };
 		43FC0DB82C574695005E04CB /* CategoryFilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC0DB72C574695005E04CB /* CategoryFilterButton.swift */; };
 		43FC0DBB2C57471F005E04CB /* BottomNavBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC0DBA2C57471F005E04CB /* BottomNavBarItem.swift */; };
 		43FC0DBD2C57472B005E04CB /* RecyclingSummaryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FC0DBC2C57472B005E04CB /* RecyclingSummaryItem.swift */; };
@@ -49,8 +51,9 @@
 
 /* Begin PBXFileReference section */
 		106AC2362C4F5FBF008419F8 /* ContributionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionView.swift; sourceTree = "<group>"; };
-		10D602492C5098CA00EA815E /* ContributionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionViewModel.swift; sourceTree = "<group>"; };
 		10D6024D2C52091D00EA815E /* Contribution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contribution.swift; sourceTree = "<group>"; };
+		10D602872C57482200EA815E /* SignInWithAppleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleViewModel.swift; sourceTree = "<group>"; };
+		10D602892C574AEB00EA815E /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		434CA2A62C4F55950098C92E /* Roambank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roambank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		434CA2A92C4F55950098C92E /* RoambankApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoambankApp.swift; sourceTree = "<group>"; };
 		434CA2AD2C4F55960098C92E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +81,7 @@
 		43DD09AB2C520C39009B0786 /* Roambank.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Roambank.entitlements; sourceTree = "<group>"; };
 		43DD09AC2C521196009B0786 /* SignInWithAppleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleView.swift; sourceTree = "<group>"; };
 		43DD09AE2C521685009B0786 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		43F6D70C2C6CE6C6002D57C4 /* ContributionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributionViewModel.swift; sourceTree = "<group>"; };
 		43FC0DB72C574695005E04CB /* CategoryFilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryFilterButton.swift; sourceTree = "<group>"; };
 		43FC0DBA2C57471F005E04CB /* BottomNavBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavBarItem.swift; sourceTree = "<group>"; };
 		43FC0DBC2C57472B005E04CB /* RecyclingSummaryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecyclingSummaryItem.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 			children = (
 				43DD09AB2C520C39009B0786 /* Roambank.entitlements */,
 				434CA3532C4F5A920098C92E /* Info.plist */,
+				10D602892C574AEB00EA815E /* Const.swift */,
 				434CA3352C4F59710098C92E /* Models */,
 				434CA3342C4F596B0098C92E /* Views */,
 				434CA32E2C4F59420098C92E /* ViewModels */,
@@ -155,6 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				43FC0DCF2C575039005E04CB /* Contribution */,
+				10D602872C57482200EA815E /* SignInWithAppleViewModel.swift */,
+				43F6D70C2C6CE6C6002D57C4 /* ContributionViewModel.swift */,
 				434CA32F2C4F594F0098C92E /* Pickup */,
 			);
 			path = ViewModels;
@@ -296,7 +303,6 @@
 		43FC0DCF2C575039005E04CB /* Contribution */ = {
 			isa = PBXGroup;
 			children = (
-				10D602492C5098CA00EA815E /* ContributionViewModel.swift */,
 			);
 			path = Contribution;
 			sourceTree = "<group>";
@@ -379,6 +385,7 @@
 				43FC0DC62C57482F005E04CB /* NewsCard.swift in Sources */,
 				10D6024E2C52091D00EA815E /* Contribution.swift in Sources */,
 				43DD09AD2C521196009B0786 /* SignInWithAppleView.swift in Sources */,
+				43F6D70D2C6CE6C6002D57C4 /* ContributionViewModel.swift in Sources */,
 				434CA3402C4F59890098C92E /* WasteDetail.swift in Sources */,
 				434CA34C2C4F59B40098C92E /* Order.swift in Sources */,
 				43DD09A42C50AFFE009B0786 /* RecycleView.swift in Sources */,
@@ -388,12 +395,14 @@
 				434CA3522C4F59C70098C92E /* MapFormView.swift in Sources */,
 				434CA33F2C4F59890098C92E /* CustomStepper.swift in Sources */,
 				43FC0DCE2C5748F7005E04CB /* OrderHistoryRow.swift in Sources */,
+				10D6028A2C574AEB00EA815E /* Const.swift in Sources */,
 				434CA2AA2C4F55950098C92E /* RoambankApp.swift in Sources */,
 				43FC0DCA2C574865005E04CB /* RecycleSectionHeader.swift in Sources */,
 				434CA34A2C4F59B40098C92E /* Penjemputan.swift in Sources */,
 				434CA34E2C4F59B40098C92E /* WasteOrder.swift in Sources */,
 				434CA3412C4F59890098C92E /* ScheduleFormView.swift in Sources */,
-				10D6024A2C5098CA00EA815E /* ContributionViewModel.swift in Sources */,
+				434CA3412C4F59890098C92E /* ScheduleFormView.swift in Sources */,
+				10D602882C57482200EA815E /* SignInWithAppleViewModel.swift in Sources */,
 				434CA33E2C4F59890098C92E /* WasteCard.swift in Sources */,
 				43FC0DBF2C574735005E04CB /* BannerView.swift in Sources */,
 				43FC0DBB2C57471F005E04CB /* BottomNavBarItem.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Penjemputan: Identifiable {
+struct Penjemputan: Codable, Identifiable {
     let id: UUID
     let rombeng: Rombeng
     let order: Order

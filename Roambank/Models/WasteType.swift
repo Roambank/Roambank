@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct WasteType: Identifiable {
+struct WasteType: Codable, Identifiable {
     let id: UUID
     let nama: String
     let gambar: String
@@ -15,6 +15,16 @@ struct WasteType: Identifiable {
     let category: String
     let wasteItems: [WasteItem]
     var steps: [Step]
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "WasteID"
+        case nama = "Name"
+        case gambar = "WasteImage"
+        case poinPerKilo = "PointsPerKilo"
+        case category = "Category"
+        case wasteItems
+        case steps
+    }
     
     init(id: UUID = UUID(), nama: String, gambar: String, poinPerKilo: Int, category: String, wasteItems: [WasteItem], steps: [Step]) {
         self.id = id

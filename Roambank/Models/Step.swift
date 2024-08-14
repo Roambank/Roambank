@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Step: Identifiable {
+struct Step: Codable, Identifiable {
     let id: UUID
     let image: String
     let description: String

@@ -14,6 +14,11 @@ struct ScheduleFormView: View {
     @State private var detailLocation: String = ""
     @Binding var navigateFromRecycle: Bool
     
+    @AppStorage("firstName") private var firstName: String = ""
+    @AppStorage("lastName") private var lastName: String = ""
+    @AppStorage("email") private var email: String = ""
+    @AppStorage("userId") private var userId: String = ""
+    
     var selectedWastes: [WasteOrder]
     
     var body: some View {
@@ -78,6 +83,10 @@ struct ScheduleFormView: View {
                 viewModel.createdOrder = viewModel.createOrder()
                 viewModel.navigateToConfirmation = true
                 viewModel.createSchedule()
+                let user = User(id: UUID(uuidString: userId) ?? UUID(), nama: "\(firstName) \(lastName)", noHP: "08123456789", alamat: selectedLocation, email: "\(email)" )
+                
+                let newOrder = Order(id: UUID(), user: user, wastes: selectedWastes, intervalJam: viewModel.selectedTime, hari: viewModel.selectedDate.getStringOfDate(), lokasi: selectedLocation, detailLokasi: detailLocation, keteranganLokasi: "", status: "", rombeng: Rombeng(), poin: 0)
+                viewModel.addOrder(newOrder: newOrder)
             }) {
                 Text("Create Schedule")
                     .frame(maxWidth: .infinity)

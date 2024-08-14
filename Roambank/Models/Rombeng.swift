@@ -7,10 +7,16 @@
 
 import Foundation
 
-struct Rombeng: Identifiable {
+struct Rombeng: Codable, Identifiable {
     let id: UUID
     let nama: String
     let wilayah: String
+    
+    init() {
+        self.id = UUID()
+        self.nama = ""
+        self.wilayah = ""
+    }
     
     init(id: UUID = UUID(), nama: String, wilayah: String) {
         self.id = id

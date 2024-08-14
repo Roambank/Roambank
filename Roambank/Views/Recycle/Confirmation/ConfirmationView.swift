@@ -138,16 +138,15 @@ struct ConfirmationView_Previews: PreviewProvider {
         let sampleUser = User(nama: "John Doe", noHP: "08123456789", alamat: "Jl. Example No. 123, Surabaya", email: "Joni@gmail.com")
         
         let sampleOrder = Order(
-            user: sampleUser,
+            id: UUID(), user: sampleUser,
             wastes: sampleWaste,
             intervalJam: "07:00 - 09:00",
             hari: "Mon, 24 Jul 2024",
             lokasi: "Some Address",
             detailLokasi: "Near the entrance",
-            status: "Pending",
+            keteranganLokasi: "Some notes", status: "Pending",
             rombeng: Rombeng(nama: "John Doe", wilayah: "Surabaya"),
-            poin: 25,
-            keteranganLokasi: "Some notes"
+            poin: 25
         )
         
         return ConfirmationView(order: sampleOrder, navigateFromRecycle: .constant(false))

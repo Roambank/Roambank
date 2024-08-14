@@ -8,16 +8,25 @@
 
 import Foundation
 
-struct Contribution: Identifiable {
+struct Contribution: Codable, Identifiable {
     let id: UUID
-    let userId: User.ID
+    let user: User
     let wasteType: WasteType
     var berat: Double
     
-    init(userId: User.ID, wasteOrder: WasteOrder) {
+    enum CodingKeys: String, CodingKey {
+        case id
+        case user = "User"
+        case wasteType = "Waste"
+        case berat = "Weight"
+    }
+    
+    init(user: User, wasteType: WasteType, wasteOrder: WasteOrder) {
         self.id = UUID()
-        self.userId = userId
-        self.wasteType = wasteOrder.wasteType
+        self.user = user
+        self.wasteType = wasteType
         self.berat = wasteOrder.berat
     }
 }
+
+

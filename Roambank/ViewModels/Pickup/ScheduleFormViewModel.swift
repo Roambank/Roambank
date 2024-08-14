@@ -52,10 +52,9 @@ class ScheduleFormViewModel: ObservableObject {
             hari: formattedDate,
             lokasi: location,
             detailLokasi: detailLocation,
-            status: "Pending",
+            keteranganLokasi: locationNotes, status: "Pending",
             rombeng: rombeng,
-            poin: totalPoin,
-            keteranganLokasi: locationNotes
+            poin: totalPoin
         )
         
         return order
@@ -102,5 +101,101 @@ class ScheduleFormViewModel: ObservableObject {
                 showingAlert = true
             }
         }
+    }
+    
+    var order: Order
+    var addOrderResponseData: AddOrderResponseData
+    var getOrdersResponseData: GetOrdersResponseData
+    
+    init() {
+        self.order = Order(id: UUID(), user: User(), wastes: [], intervalJam: "", hari: "", lokasi: "", detailLokasi: "", keteranganLokasi: "", status: "", rombeng: Rombeng(), poin: 0)
+        self.addOrderResponseData = AddOrderResponseData(code: 0, desc: "")
+        self.getOrdersResponseData = GetOrdersResponseData(code: 0, desc: "", orderData: Order(user: User(), wastes: [], intervalJam: "", hari: "", lokasi: "", detailLokasi: "", keteranganLokasi: "", status: "", rombeng: Rombeng(), poin: 0))
+    }
+    
+    func addOrder(newOrder: Order) {
+        guard let url = URL(string: Const.baseURL) else { return }
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        do {
+            let requestData = AddOrderRequestData(feature: Const.addOrderEP, orderData: newOrder)
+            let jsonData = try JSONEncoder().encode(requestData)
+            print(String(data: jsonData, encoding: .utf8) ?? "")
+            request.httpBody = jsonData
+            
+            let dataTask = URLSession.shared.dataTask(with: request) { data, response, error in
+                if let error = error {
+                    print("Request Error: ", error)
+                    return
+                }
+                
+                guard let response = response as? HTTPURLResponse else { return }
+                
+                if response.statusCode == 200 {
+                    guard let data = data else { return }
+                    do {
+                        print("Response:", String(data: data, encoding: .utf8) ?? "")
+                        let decodedData = try JSONDecoder().decode(AddOrderResponseData.self, from: data)
+                        self.addOrderResponseData = decodedData
+                    }
+                    catch let error {
+                        print("Error Decoding:", error)
+                    }
+                }
+            }
+            
+            dataTask.resume()
+        } catch let error {
+            print("Error Request:", error)
+        }
+    }
+    
+    func getOrderData(orderId: UUID) {
+        guard let url = URL(string: Const.baseURL) else { return }
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        do {
+            let requestData = GetOrdersRequestData(feature: Const.getOrderBasedOnIdEP, orderId: orderId)
+            let jsonData = try JSONEncoder().encode(requestData)
+            print(String(data: jsonData, encoding: .utf8) ?? "")
+            request.httpBody = jsonData
+            
+            let dataTask = URLSession.shared.dataTask(with: request) { data, response, error in
+                if let error = error {
+                    print("Request Error: ", error)
+                    return
+                }
+                
+                guard let response = response as? HTTPURLResponse else { return }
+                
+                if response.statusCode == 200 {
+                    guard let data = data else { return }
+                    do {
+                        print(String(data: data, encoding: .utf8) ?? "")
+                        let decodedData = try JSONDecoder().decode(GetOrdersResponseData.self, from: data)
+                        self.getOrdersResponseData = decodedData
+                    }
+                    catch let error {
+                        print("Error Decoding:", error)
+                    }
+                }
+            }
+            
+            dataTask.resume()
+        } catch let error {
+            print("Error Request:", error)
+        }
+    }
+}
+
+extension Date {
+    func getStringOfDate() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        return dateFormatter.string(from: self)
     }
 }
